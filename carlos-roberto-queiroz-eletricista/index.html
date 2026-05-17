@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Roberto Queiroz Eletricista - Atendimento rapido</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #101827;
+      --text: #e5e7eb;
+      --muted: #9fb0c7;
+      --accent: #38bdf8;
+      --accent-dark: #0ea5e9;
+      --line: rgba(148, 163, 184, 0.16);
+      --success: #22c55e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.16), transparent 32%),
+        linear-gradient(180deg, #040816 0%, #0f172a 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    .hero, .section {
+      background: rgba(16, 24, 39, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 20px 60px rgba(2, 6, 23, 0.25);
+    }
+    h1, h2, h3 { margin: 0 0 12px; }
+    h1 { font-size: 42px; line-height: 1.05; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 18px; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    .eyebrow {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      color: #bae6fd;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #062235;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .cta:hover { background: var(--accent-dark); }
+    .subtle-cta {
+      display: inline-block;
+      margin-left: 10px;
+      margin-top: 16px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      color: var(--text);
+      border: 1px solid var(--line);
+      text-decoration: none;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .item {
+      padding: 18px;
+      border-radius: 16px;
+      background: rgba(8, 15, 30, 0.92);
+      border: 1px solid rgba(148, 163, 184, 0.1);
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.15);
+      color: #86efac;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+    }
+    .proof {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .proof-card {
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(8, 15, 30, 0.92);
+      border: 1px solid rgba(148, 163, 184, 0.1);
+    }
+    .proof-card strong {
+      display: block;
+      font-size: 22px;
+      color: white;
+      margin-bottom: 4px;
+    }
+    .demo-note {
+      margin-top: 24px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      color: #dbeafe;
+      font-size: 14px;
+    }
+    .footer {
+      color: #7c8ba1;
+      font-size: 13px;
+      text-align: center;
+      padding-top: 4px;
+    }
+    @media (max-width: 640px) {
+      h1 { font-size: 34px; }
+      .hero, .section { padding: 22px; }
+      .subtle-cta { margin-left: 0; display: block; width: fit-content; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">
+        <div class="badge">electrician em Sao Jose do Rio Preto</div>
+        <div class="pill">preview demonstrativo</div>
+      </div>
+      <h1>Carlos Roberto Queiroz Eletricista</h1>
+      <p>Carlos Roberto Queiroz Eletricista atende Sao Jose do Rio Preto com resposta rapida e atendimento simples no WhatsApp.</p>
+      <a class="cta" href="https://wa.me/551732382773">Falar no WhatsApp</a>
+      <a class="subtle-cta" href="#servicos">Ver servicos</a>
+      <div class="proof">
+        <div class="proof-card">
+          <strong>1 min</strong>
+          <span>para pedir atendimento</span>
+        </div>
+        <div class="proof-card">
+          <strong>Mobile</strong>
+          <span>layout pensado para celular</span>
+        </div>
+        <div class="proof-card">
+          <strong>WhatsApp</strong>
+          <span>contato rapido e direto</span>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="servicos">
+      <h2>Servicos</h2>
+      <div class="grid">
+        <div class="item">Atendimento rapido no WhatsApp</div>
+        <div class="item">Orcamento facil para novos clientes</div>
+        <div class="item">Pagina simples, clara e focada em conversao</div>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Por que escolher Carlos Roberto Queiroz Eletricista?</h2>
+      <p>Site enxuto, mobile-first e pensado para transformar visitas em conversas no WhatsApp.</p>
+    </section>
+    <section class="section">
+      <h2>Atendimento rapido</h2>
+      <p>Quer atendimento rapido? Mande uma mensagem agora e receba retorno direto no WhatsApp.</p>
+      <a class="cta" href="https://wa.me/551732382773">Chamar agora</a>
+      <div class="demo-note">
+        Esta pagina e uma previa demonstrativa criada para mostrar como Carlos Roberto Queiroz Eletricista
+        pode se apresentar melhor online e transformar visitas em conversas no WhatsApp.
+      </div>
+    </section>
+    <div class="footer">Preview demonstrativo criado para prospeccao comercial.</div>
+  </div>
+</body>
+</html>
