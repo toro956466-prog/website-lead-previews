@@ -9,66 +9,68 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f3ede3;
-      --ink: #1f2937;
-      --muted: #5b6472;
-      --accent: #ef7b2d;
-      --accent-dark: #cf641d;
-      --panel: rgba(255, 251, 245, 0.92);
-      --line: rgba(31, 41, 55, 0.12);
-      --sand: #d4b483;
-      --steel: #29465b;
+      --bg: #efe8db;
+      --ink: #15181d;
+      --muted: #5b6270;
+      --accent: #f18835;
+      --accent-dark: #cf6b1d;
+      --accent-soft: rgba(241, 136, 53, 0.1);
+      --panel: rgba(255, 250, 244, 0.94);
+      --line: rgba(21, 24, 29, 0.1);
+      --deep: #18232f;
+      --deep-soft: #243443;
+      --warm: #d7c0a1;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(239, 123, 45, 0.16), transparent 24%),
+        radial-gradient(circle at top left, rgba(241, 136, 53, 0.2), transparent 22%),
         linear-gradient(180deg, #f8f2e9 0%, #efe5d6 100%);
       color: var(--ink);
       line-height: 1.5;
     }
     .wrap {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 28px 20px 80px;
+      padding: 24px 18px 110px;
     }
     .hero, .section {
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 28px;
-      padding: 28px;
-      margin-bottom: 20px;
+      padding: 26px;
+      margin-bottom: 18px;
       box-shadow: 0 22px 60px rgba(62, 39, 9, 0.08);
     }
     h1, h2, h3 { margin: 0 0 12px; }
-    h1 { font-size: 54px; line-height: 0.98; letter-spacing: -0.04em; }
-    h2 { font-size: 28px; letter-spacing: -0.03em; }
+    h1 { font-size: 58px; line-height: 0.96; letter-spacing: -0.05em; max-width: 9ch; }
+    h2 { font-size: 28px; letter-spacing: -0.035em; }
     h3 { font-size: 18px; }
-    p { margin: 0 0 12px; color: var(--muted); }
+    p { margin: 0 0 12px; color: var(--muted); font-size: 16px; }
     .hero {
       padding: 0;
       overflow: hidden;
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      min-height: 540px;
+      grid-template-columns: 1.05fr 0.95fr;
+      min-height: 620px;
     }
     .hero-copy {
-      padding: 40px 38px 38px;
+      padding: 42px 38px 34px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.74), rgba(255,255,255,0.92));
+        linear-gradient(180deg, rgba(255,255,255,0.78), rgba(255,255,255,0.94));
     }
     .hero-media {
       position: relative;
-      min-height: 360px;
+      min-height: 380px;
       background-image:
-        linear-gradient(180deg, rgba(18, 27, 35, 0.18), rgba(18, 27, 35, 0.38)),
+        linear-gradient(180deg, rgba(17, 24, 31, 0.12), rgba(17, 24, 31, 0.42)),
         url('https://www.encontrasaojosedoriopreto.com.br/imgs/imagens-sao-jose-do-rio-preto/eletricista-em-sao-jose-do-rio-preto.jpg');
       background-size: cover;
       background-position: center;
@@ -77,58 +79,86 @@
       content: "";
       position: absolute;
       inset: 20px;
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.34);
+      border-radius: 22px;
       pointer-events: none;
+    }
+    .brand-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      color: var(--deep);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .brand-kicker::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: rgba(21, 24, 29, 0.28);
     }
     .eyebrow {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
     .pill {
       display: inline-block;
       padding: 7px 12px;
       border-radius: 999px;
-      background: rgba(41, 70, 91, 0.09);
-      border: 1px solid rgba(41, 70, 91, 0.14);
-      color: var(--steel);
+      background: rgba(36, 52, 67, 0.08);
+      border: 1px solid rgba(36, 52, 67, 0.12);
+      color: var(--deep-soft);
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
+    .lede {
+      max-width: 34ch;
+      font-size: 18px;
+      line-height: 1.55;
+    }
     .cta {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       margin-top: 16px;
-      padding: 14px 20px;
+      padding: 15px 22px;
       border-radius: 999px;
       background: var(--accent);
       color: #fff8f1;
       font-weight: 700;
       text-decoration: none;
+      box-shadow: 0 12px 30px rgba(241, 136, 53, 0.22);
     }
     .cta:hover { background: var(--accent-dark); }
     .subtle-cta {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       margin-left: 10px;
       margin-top: 16px;
-      padding: 14px 20px;
+      padding: 15px 20px;
       border-radius: 999px;
       color: var(--ink);
       border: 1px solid var(--line);
       text-decoration: none;
-      background: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.78);
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
+      gap: 14px;
     }
     .item {
-      padding: 18px;
-      border-radius: 20px;
+      padding: 20px;
+      border-radius: 22px;
       background: rgba(255,255,255,0.74);
       border: 1px solid rgba(31, 41, 55, 0.08);
     }
@@ -136,39 +166,43 @@
       display: inline-block;
       padding: 6px 10px;
       border-radius: 999px;
-      background: rgba(212, 180, 131, 0.28);
-      color: #80551d;
+      background: rgba(215, 192, 161, 0.34);
+      color: #7d541e;
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       margin-bottom: 14px;
     }
-    .proof {
+    .hero-points {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
       margin-top: 18px;
     }
-    .proof-card {
+    .hero-point {
       padding: 14px 16px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.74);
-      border: 1px solid rgba(31, 41, 55, 0.08);
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(21, 24, 29, 0.08);
     }
-    .proof-card strong {
+    .hero-point strong {
       display: block;
-      font-size: 22px;
+      font-size: 16px;
       color: var(--ink);
       margin-bottom: 4px;
+    }
+    .hero-point span {
+      color: var(--muted);
+      font-size: 14px;
     }
     .demo-note {
       margin-top: 24px;
       padding: 14px 16px;
       border-radius: 14px;
-      background: rgba(41, 70, 91, 0.06);
-      border: 1px solid rgba(41, 70, 91, 0.12);
-      color: var(--steel);
+      background: rgba(24, 35, 47, 0.05);
+      border: 1px solid rgba(24, 35, 47, 0.09);
+      color: var(--deep-soft);
       font-size: 14px;
     }
     .meta {
@@ -176,18 +210,49 @@
       gap: 12px;
       flex-wrap: wrap;
       margin-top: 18px;
-      color: var(--steel);
+      color: var(--deep-soft);
       font-size: 14px;
       font-weight: 500;
     }
-    .section-split {
+    .service-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 18px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .service-card {
+      padding: 22px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.84), rgba(255,255,255,0.7));
+      border: 1px solid rgba(21, 24, 29, 0.08);
+    }
+    .service-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .trust-band {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+    .trust-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.76);
+      border: 1px solid rgba(21, 24, 29, 0.08);
     }
     .contact-card {
-      border-radius: 22px;
-      background: linear-gradient(180deg, #1f3445 0%, #142230 100%);
+      border-radius: 24px;
+      background: linear-gradient(180deg, var(--deep) 0%, #111923 100%);
       color: #ecf4fb;
       padding: 24px;
       height: 100%;
@@ -196,11 +261,40 @@
       color: rgba(236, 244, 251, 0.78);
     }
     .contact-card .cta {
+      width: 100%;
+      margin-top: 8px;
       background: #fff4e7;
       color: #8d4d16;
     }
     .contact-card .cta:hover {
       background: #ffe7ce;
+    }
+    .closing {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+    }
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      z-index: 20;
+      padding: 12px;
+      border-radius: 22px;
+      background: rgba(18, 25, 34, 0.94);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(10px);
+    }
+    .sticky-cta a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0;
+      text-decoration: none;
     }
     .footer {
       color: #74695d;
@@ -209,14 +303,20 @@
       padding-top: 4px;
     }
     @media (max-width: 640px) {
-      h1 { font-size: 38px; }
-      .hero, .section { padding: 22px; }
+      h1 { font-size: 42px; max-width: 11ch; }
+      .hero, .section { padding: 20px; }
+      .wrap { padding-bottom: 120px; }
       .subtle-cta { margin-left: 0; display: block; width: fit-content; }
+      .closing { grid-template-columns: 1fr; }
+      .sticky-cta { display: block; }
     }
     @media (max-width: 860px) {
-      .hero-grid, .section-split { grid-template-columns: 1fr; }
-      .hero-media { min-height: 280px; order: -1; }
-      .hero-copy { padding: 28px 24px 26px; }
+      .hero-grid,
+      .service-grid,
+      .trust-band { grid-template-columns: 1fr; }
+      .hero-media { min-height: 300px; order: -1; }
+      .hero-copy { padding: 28px 24px 24px; }
+      .hero-points { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -226,12 +326,13 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <div>
+            <div class="brand-kicker">WhatsApp-first preview</div>
             <div class="eyebrow">
               <div class="badge">electrician em Sao Jose do Rio Preto</div>
               <div class="pill">preview demonstrativo</div>
             </div>
             <h1>Carlos Roberto Queiroz Eletricista</h1>
-            <p>Carlos Roberto Queiroz Eletricista atende Sao Jose do Rio Preto com foco em servicos eletricos residenciais e comerciais, contato rapido no WhatsApp e apresentacao profissional para novos clientes.</p>
+            <p class="lede">Carlos Roberto Queiroz Eletricista atende Sao Jose do Rio Preto com foco em servicos eletricos residenciais e comerciais, contato rapido no WhatsApp e apresentacao profissional para novos clientes.</p>
             <div class="meta">
               <span>Rua Comendador Nicolau Lopes Rossi, 921 - Cristo Rei, Sao Jose do Rio Preto</span>
               <span>+55 17 3238-2773</span>
@@ -240,16 +341,16 @@
           <div>
             <a class="cta" href="https://wa.me/551732382773">Pedir orcamento</a>
             <a class="subtle-cta" href="https://www.encontrasaojosedoriopreto.com.br/e/eletricistas-em-sao-jose-do-rio-preto.shtml">Ver localizacao</a>
-            <div class="proof">
-              <div class="proof-card">
+            <div class="hero-points">
+              <div class="hero-point">
                 <strong>Contato rapido</strong>
                 <span>CTA direta para WhatsApp</span>
               </div>
-              <div class="proof-card">
+              <div class="hero-point">
                 <strong>Mais confianca</strong>
                 <span>apresentacao clara do servico</span>
               </div>
-              <div class="proof-card">
+              <div class="hero-point">
                 <strong>Mobile-first</strong>
                 <span>feito para abrir bem no celular</span>
               </div>
@@ -261,41 +362,45 @@
     </section>
     <section class="section" id="servicos">
       <h2>Servicos</h2>
-      <div class="grid">
-        <div class="item">Instalacoes e manutencoes eletricas</div>
-        <div class="item">Atendimento rapido por WhatsApp</div>
-        <div class="item">Pagina clara para gerar mais pedidos de orcamento</div>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-number">01</div>
+          <h3>Instalacoes e manutencoes eletricas</h3>
+          <p>Apresentacao clara do que a empresa faz, com foco no que o cliente quer resolver.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-number">02</div>
+          <h3>Atendimento rapido por WhatsApp</h3>
+          <p>Fluxo simples para sair da visita e entrar direto na conversa comercial.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-number">03</div>
+          <h3>Pagina clara para gerar mais pedidos de orcamento</h3>
+          <p>Estrutura feita para parecer mais profissional sem complicar a leitura.</p>
+        </div>
       </div>
     </section>
     <section class="section">
-      <div class="section-split">
-        <div class="item">
+      <div class="trust-band">
+        <div class="trust-card">
           <h2>Por que essa pagina funciona melhor</h2>
           <p>Uma pagina melhor posiciona Carlos Roberto Queiroz Eletricista com mais clareza, passa mais confianca e transforma visitas em contatos reais.</p>
           <p>Base em Rua Comendador Nicolau Lopes Rossi, 921 - Cristo Rei, Sao Jose do Rio Preto. Atendimento em Sao Jose do Rio Preto e regiao.</p>
         </div>
         <div class="contact-card">
-          <h2>Contato em destaque</h2>
+          <h2>WhatsApp em destaque</h2>
           <p>Quem encontra Carlos Roberto Queiroz Eletricista no celular precisa entender o servico e chamar no WhatsApp em segundos.</p>
           <a class="cta" href="https://wa.me/551732382773">Chamar no WhatsApp</a>
         </div>
       </div>
     </section>
     <section class="section">
-      <h2>Como ficaria a presenca online</h2>
-      <div class="grid">
-        <div class="item">
-          <h3>Hero mais forte</h3>
-          <p>Imagem, nome e CTA claros logo na primeira dobra.</p>
+      <div class="closing">
+        <div>
+          <h2>Presenca mais forte, sem complicar</h2>
+          <p>O objetivo aqui nao e parecer uma startup. E fazer a empresa parecer mais profissional, mais confiavel e mais facil de contratar.</p>
         </div>
-        <div class="item">
-          <h3>Servico mais explicito</h3>
-          <p>Menos confusao para quem chega por indicacao ou pesquisa local.</p>
-        </div>
-        <div class="item">
-          <h3>Mais conversao</h3>
-          <p>Menos friccao entre visita, confianca e pedido de orcamento.</p>
-        </div>
+        <a class="cta" href="https://wa.me/551732382773">Falar agora</a>
       </div>
       <div class="demo-note">
         Esta pagina e uma previa demonstrativa criada para mostrar como Carlos Roberto Queiroz Eletricista
@@ -303,6 +408,9 @@
       </div>
     </section>
     <div class="footer">Preview demonstrativo criado para prospeccao comercial.</div>
+  </div>
+  <div class="sticky-cta">
+    <a class="cta" href="https://wa.me/551732382773">Chamar no WhatsApp</a>
   </div>
 </body>
 </html>
