@@ -4,45 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carlos Roberto Queiroz Eletricista - Atendimento rapido</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0b1220;
-      --card: #101827;
-      --text: #e5e7eb;
-      --muted: #9fb0c7;
-      --accent: #38bdf8;
-      --accent-dark: #0ea5e9;
-      --line: rgba(148, 163, 184, 0.16);
-      --success: #22c55e;
+      --bg: #f3ede3;
+      --ink: #1f2937;
+      --muted: #5b6472;
+      --accent: #ef7b2d;
+      --accent-dark: #cf641d;
+      --panel: rgba(255, 251, 245, 0.92);
+      --line: rgba(31, 41, 55, 0.12);
+      --sand: #d4b483;
+      --steel: #29465b;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top, rgba(56, 189, 248, 0.16), transparent 32%),
-        linear-gradient(180deg, #040816 0%, #0f172a 100%);
-      color: var(--text);
+        radial-gradient(circle at top left, rgba(239, 123, 45, 0.16), transparent 24%),
+        linear-gradient(180deg, #f8f2e9 0%, #efe5d6 100%);
+      color: var(--ink);
       line-height: 1.5;
     }
     .wrap {
-      max-width: 960px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 48px 20px 80px;
+      padding: 28px 20px 80px;
     }
     .hero, .section {
-      background: rgba(16, 24, 39, 0.92);
+      background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 20px;
+      border-radius: 28px;
       padding: 28px;
       margin-bottom: 20px;
-      box-shadow: 0 20px 60px rgba(2, 6, 23, 0.25);
+      box-shadow: 0 22px 60px rgba(62, 39, 9, 0.08);
     }
     h1, h2, h3 { margin: 0 0 12px; }
-    h1 { font-size: 42px; line-height: 1.05; }
-    h2 { font-size: 24px; }
+    h1 { font-size: 54px; line-height: 0.98; letter-spacing: -0.04em; }
+    h2 { font-size: 28px; letter-spacing: -0.03em; }
     h3 { font-size: 18px; }
     p { margin: 0 0 12px; color: var(--muted); }
+    .hero {
+      padding: 0;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      min-height: 540px;
+    }
+    .hero-copy {
+      padding: 40px 38px 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.74), rgba(255,255,255,0.92));
+    }
+    .hero-media {
+      position: relative;
+      min-height: 360px;
+      background-image:
+        linear-gradient(180deg, rgba(18, 27, 35, 0.18), rgba(18, 27, 35, 0.38)),
+        url('https://www.encontrasaojosedoriopreto.com.br/imgs/imagens-sao-jose-do-rio-preto/eletricista-em-sao-jose-do-rio-preto.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-media::after {
+      content: "";
+      position: absolute;
+      inset: 20px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      pointer-events: none;
+    }
     .eyebrow {
       display: flex;
       gap: 10px;
@@ -53,9 +91,9 @@
       display: inline-block;
       padding: 7px 12px;
       border-radius: 999px;
-      background: rgba(56, 189, 248, 0.12);
-      border: 1px solid rgba(56, 189, 248, 0.18);
-      color: #bae6fd;
+      background: rgba(41, 70, 91, 0.09);
+      border: 1px solid rgba(41, 70, 91, 0.14);
+      color: var(--steel);
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
@@ -67,7 +105,7 @@
       padding: 14px 20px;
       border-radius: 999px;
       background: var(--accent);
-      color: #062235;
+      color: #fff8f1;
       font-weight: 700;
       text-decoration: none;
     }
@@ -78,9 +116,10 @@
       margin-top: 16px;
       padding: 14px 20px;
       border-radius: 999px;
-      color: var(--text);
+      color: var(--ink);
       border: 1px solid var(--line);
       text-decoration: none;
+      background: rgba(255,255,255,0.7);
     }
     .grid {
       display: grid;
@@ -89,16 +128,16 @@
     }
     .item {
       padding: 18px;
-      border-radius: 16px;
-      background: rgba(8, 15, 30, 0.92);
-      border: 1px solid rgba(148, 163, 184, 0.1);
+      border-radius: 20px;
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(31, 41, 55, 0.08);
     }
     .badge {
       display: inline-block;
       padding: 6px 10px;
       border-radius: 999px;
-      background: rgba(34, 197, 94, 0.15);
-      color: #86efac;
+      background: rgba(212, 180, 131, 0.28);
+      color: #80551d;
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
@@ -113,80 +152,151 @@
     }
     .proof-card {
       padding: 14px 16px;
-      border-radius: 14px;
-      background: rgba(8, 15, 30, 0.92);
-      border: 1px solid rgba(148, 163, 184, 0.1);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(31, 41, 55, 0.08);
     }
     .proof-card strong {
       display: block;
       font-size: 22px;
-      color: white;
+      color: var(--ink);
       margin-bottom: 4px;
     }
     .demo-note {
       margin-top: 24px;
       padding: 14px 16px;
       border-radius: 14px;
-      background: rgba(56, 189, 248, 0.08);
-      border: 1px solid rgba(56, 189, 248, 0.18);
-      color: #dbeafe;
+      background: rgba(41, 70, 91, 0.06);
+      border: 1px solid rgba(41, 70, 91, 0.12);
+      color: var(--steel);
       font-size: 14px;
     }
+    .meta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+      color: var(--steel);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .section-split {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+    }
+    .contact-card {
+      border-radius: 22px;
+      background: linear-gradient(180deg, #1f3445 0%, #142230 100%);
+      color: #ecf4fb;
+      padding: 24px;
+      height: 100%;
+    }
+    .contact-card p {
+      color: rgba(236, 244, 251, 0.78);
+    }
+    .contact-card .cta {
+      background: #fff4e7;
+      color: #8d4d16;
+    }
+    .contact-card .cta:hover {
+      background: #ffe7ce;
+    }
     .footer {
-      color: #7c8ba1;
+      color: #74695d;
       font-size: 13px;
       text-align: center;
       padding-top: 4px;
     }
     @media (max-width: 640px) {
-      h1 { font-size: 34px; }
+      h1 { font-size: 38px; }
       .hero, .section { padding: 22px; }
       .subtle-cta { margin-left: 0; display: block; width: fit-content; }
+    }
+    @media (max-width: 860px) {
+      .hero-grid, .section-split { grid-template-columns: 1fr; }
+      .hero-media { min-height: 280px; order: -1; }
+      .hero-copy { padding: 28px 24px 26px; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <section class="hero">
-      <div class="eyebrow">
-        <div class="badge">electrician em Sao Jose do Rio Preto</div>
-        <div class="pill">preview demonstrativo</div>
-      </div>
-      <h1>Carlos Roberto Queiroz Eletricista</h1>
-      <p>Carlos Roberto Queiroz Eletricista atende Sao Jose do Rio Preto com resposta rapida e atendimento simples no WhatsApp.</p>
-      <a class="cta" href="https://wa.me/551732382773">Falar no WhatsApp</a>
-      <a class="subtle-cta" href="#servicos">Ver servicos</a>
-      <div class="proof">
-        <div class="proof-card">
-          <strong>1 min</strong>
-          <span>para pedir atendimento</span>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">
+              <div class="badge">electrician em Sao Jose do Rio Preto</div>
+              <div class="pill">preview demonstrativo</div>
+            </div>
+            <h1>Carlos Roberto Queiroz Eletricista</h1>
+            <p>Carlos Roberto Queiroz Eletricista atende Sao Jose do Rio Preto com foco em servicos eletricos residenciais e comerciais, contato rapido no WhatsApp e apresentacao profissional para novos clientes.</p>
+            <div class="meta">
+              <span>Rua Comendador Nicolau Lopes Rossi, 921 - Cristo Rei, Sao Jose do Rio Preto</span>
+              <span>+55 17 3238-2773</span>
+            </div>
+          </div>
+          <div>
+            <a class="cta" href="https://wa.me/551732382773">Pedir orcamento</a>
+            <a class="subtle-cta" href="https://www.encontrasaojosedoriopreto.com.br/e/eletricistas-em-sao-jose-do-rio-preto.shtml">Ver localizacao</a>
+            <div class="proof">
+              <div class="proof-card">
+                <strong>Contato rapido</strong>
+                <span>CTA direta para WhatsApp</span>
+              </div>
+              <div class="proof-card">
+                <strong>Mais confianca</strong>
+                <span>apresentacao clara do servico</span>
+              </div>
+              <div class="proof-card">
+                <strong>Mobile-first</strong>
+                <span>feito para abrir bem no celular</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="proof-card">
-          <strong>Mobile</strong>
-          <span>layout pensado para celular</span>
-        </div>
-        <div class="proof-card">
-          <strong>WhatsApp</strong>
-          <span>contato rapido e direto</span>
-        </div>
+        <div class="hero-media"></div>
       </div>
     </section>
     <section class="section" id="servicos">
       <h2>Servicos</h2>
       <div class="grid">
-        <div class="item">Atendimento rapido no WhatsApp</div>
-        <div class="item">Orcamento facil para novos clientes</div>
-        <div class="item">Pagina simples, clara e focada em conversao</div>
+        <div class="item">Instalacoes e manutencoes eletricas</div>
+        <div class="item">Atendimento rapido por WhatsApp</div>
+        <div class="item">Pagina clara para gerar mais pedidos de orcamento</div>
       </div>
     </section>
     <section class="section">
-      <h2>Por que escolher Carlos Roberto Queiroz Eletricista?</h2>
-      <p>Site enxuto, mobile-first e pensado para transformar visitas em conversas no WhatsApp.</p>
+      <div class="section-split">
+        <div class="item">
+          <h2>Por que essa pagina funciona melhor</h2>
+          <p>Uma pagina melhor posiciona Carlos Roberto Queiroz Eletricista com mais clareza, passa mais confianca e transforma visitas em contatos reais.</p>
+          <p>Base em Rua Comendador Nicolau Lopes Rossi, 921 - Cristo Rei, Sao Jose do Rio Preto. Atendimento em Sao Jose do Rio Preto e regiao.</p>
+        </div>
+        <div class="contact-card">
+          <h2>Contato em destaque</h2>
+          <p>Quem encontra Carlos Roberto Queiroz Eletricista no celular precisa entender o servico e chamar no WhatsApp em segundos.</p>
+          <a class="cta" href="https://wa.me/551732382773">Chamar no WhatsApp</a>
+        </div>
+      </div>
     </section>
     <section class="section">
-      <h2>Atendimento rapido</h2>
-      <p>Quer atendimento rapido? Mande uma mensagem agora e receba retorno direto no WhatsApp.</p>
-      <a class="cta" href="https://wa.me/551732382773">Chamar agora</a>
+      <h2>Como ficaria a presenca online</h2>
+      <div class="grid">
+        <div class="item">
+          <h3>Hero mais forte</h3>
+          <p>Imagem, nome e CTA claros logo na primeira dobra.</p>
+        </div>
+        <div class="item">
+          <h3>Servico mais explicito</h3>
+          <p>Menos confusao para quem chega por indicacao ou pesquisa local.</p>
+        </div>
+        <div class="item">
+          <h3>Mais conversao</h3>
+          <p>Menos friccao entre visita, confianca e pedido de orcamento.</p>
+        </div>
+      </div>
       <div class="demo-note">
         Esta pagina e uma previa demonstrativa criada para mostrar como Carlos Roberto Queiroz Eletricista
         pode se apresentar melhor online e transformar visitas em conversas no WhatsApp.
