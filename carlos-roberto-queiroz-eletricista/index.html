@@ -238,6 +238,30 @@
       font-size: 13px;
       font-weight: 700;
     }
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+    .service-list li {
+      position: relative;
+      padding-left: 16px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+    .service-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
     .trust-band {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -339,7 +363,7 @@
             </div>
           </div>
           <div>
-            <a class="cta" href="https://wa.me/551732382773">Pedir orcamento</a>
+            <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Pedir orcamento</a>
             <a class="subtle-cta" href="https://www.encontrasaojosedoriopreto.com.br/e/eletricistas-em-sao-jose-do-rio-preto.shtml">Ver localizacao</a>
             <div class="hero-points">
               <div class="hero-point">
@@ -365,18 +389,24 @@
       <div class="service-grid">
         <div class="service-card">
           <div class="service-number">01</div>
-          <h3>Instalacoes e manutencoes eletricas</h3>
-          <p>Apresentacao clara do que a empresa faz, com foco no que o cliente quer resolver.</p>
+          <h3>Instalacoes</h3>
+          <ul class="service-list">
+            <li>iluminacao interna e externa</li><li>troca de tomadas e interruptores</li><li>chuveiros e ventiladores</li><li>pontos novos e extensoes</li>
+          </ul>
         </div>
-        <div class="service-card">
+<div class="service-card">
           <div class="service-number">02</div>
-          <h3>Atendimento rapido por WhatsApp</h3>
-          <p>Fluxo simples para sair da visita e entrar direto na conversa comercial.</p>
+          <h3>Manutencao e reparos</h3>
+          <ul class="service-list">
+            <li>queda de energia e curto</li><li>troca de disjuntores</li><li>revisao de fiacao</li><li>correcao de falhas eletricas</li>
+          </ul>
         </div>
-        <div class="service-card">
+<div class="service-card">
           <div class="service-number">03</div>
-          <h3>Pagina clara para gerar mais pedidos de orcamento</h3>
-          <p>Estrutura feita para parecer mais profissional sem complicar a leitura.</p>
+          <h3>Residencial e comercial</h3>
+          <ul class="service-list">
+            <li>quadro de energia</li><li>adequacoes e melhorias</li><li>atendimento local rapido</li><li>orcamento por WhatsApp</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -390,7 +420,7 @@
         <div class="contact-card">
           <h2>WhatsApp em destaque</h2>
           <p>Quem encontra Carlos Roberto Queiroz Eletricista no celular precisa entender o servico e chamar no WhatsApp em segundos.</p>
-          <a class="cta" href="https://wa.me/551732382773">Chamar no WhatsApp</a>
+          <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Chamar no WhatsApp</a>
         </div>
       </div>
     </section>
@@ -400,7 +430,7 @@
           <h2>Presenca mais forte, sem complicar</h2>
           <p>O objetivo aqui nao e parecer uma startup. E fazer a empresa parecer mais profissional, mais confiavel e mais facil de contratar.</p>
         </div>
-        <a class="cta" href="https://wa.me/551732382773">Falar agora</a>
+        <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Falar agora</a>
       </div>
       <div class="demo-note">
         Esta pagina e uma previa demonstrativa criada para mostrar como Carlos Roberto Queiroz Eletricista
@@ -410,7 +440,7 @@
     <div class="footer">Preview demonstrativo criado para prospeccao comercial.</div>
   </div>
   <div class="sticky-cta">
-    <a class="cta" href="https://wa.me/551732382773">Chamar no WhatsApp</a>
+    <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Chamar no WhatsApp</a>
   </div>
 </body>
 </html>
