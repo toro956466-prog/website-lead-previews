@@ -3,92 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carlos Roberto Queiroz Eletricista - Atendimento rapido</title>
+  <title>Carlos Roberto Queiroz Eletricista - Atendimento profissional no WhatsApp</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #efe8db;
-      --ink: #15181d;
-      --muted: #5b6270;
-      --accent: #f18835;
-      --accent-dark: #cf6b1d;
-      --accent-soft: rgba(241, 136, 53, 0.1);
-      --panel: rgba(255, 250, 244, 0.94);
-      --line: rgba(21, 24, 29, 0.1);
-      --deep: #18232f;
-      --deep-soft: #243443;
-      --warm: #d7c0a1;
+      --bg: #0f1722;
+      --bg-soft: #121d2a;
+      --card: #f7f1e7;
+      --card-2: #f1e7d8;
+      --ink: #101722;
+      --muted: #5e6775;
+      --accent: #ffb347;
+      --accent-2: #36d3c3;
+      --line: rgba(255, 255, 255, 0.08);
+      --line-dark: rgba(16, 23, 34, 0.1);
+      --panel: rgba(247, 241, 231, 0.96);
+      --shadow: 0 28px 80px rgba(2, 6, 23, 0.28);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(241, 136, 53, 0.2), transparent 22%),
-        linear-gradient(180deg, #f8f2e9 0%, #efe5d6 100%);
-      color: var(--ink);
+        radial-gradient(circle at top left, rgba(255, 179, 71, 0.26), transparent 18%),
+        radial-gradient(circle at top right, rgba(54, 211, 195, 0.14), transparent 20%),
+        linear-gradient(180deg, #0f1722 0%, #111b28 42%, #e9dfcf 42%, #efe6d8 100%);
+      color: #fefefe;
       line-height: 1.5;
     }
     .wrap {
-      max-width: 1120px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 24px 18px 110px;
     }
-    .hero, .section {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 26px;
+    .hero-shell {
+      position: relative;
       margin-bottom: 18px;
-      box-shadow: 0 22px 60px rgba(62, 39, 9, 0.08);
-    }
-    h1, h2, h3 { margin: 0 0 12px; }
-    h1 { font-size: 58px; line-height: 0.96; letter-spacing: -0.05em; max-width: 9ch; }
-    h2 { font-size: 28px; letter-spacing: -0.035em; }
-    h3 { font-size: 18px; }
-    p { margin: 0 0 12px; color: var(--muted); font-size: 16px; }
-    .hero {
-      padding: 0;
+      border-radius: 34px;
       overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03)),
+        linear-gradient(180deg, #121d2a 0%, #0f1823 100%);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
     }
+    .section {
+      background: var(--panel);
+      color: var(--ink);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 30px;
+      padding: 28px;
+      margin-bottom: 18px;
+      box-shadow: 0 20px 55px rgba(17, 24, 39, 0.08);
+    }
+    .section.dark {
+      background:
+        linear-gradient(160deg, #132031 0%, #0d1620 100%);
+      color: #f7f7f7;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow);
+    }
+    h1, h2, h3, h4 { margin: 0 0 12px; }
+    h1 {
+      font-size: 64px;
+      line-height: 0.92;
+      letter-spacing: -0.06em;
+      max-width: 8ch;
+    }
+    h2 { font-size: 30px; letter-spacing: -0.04em; }
+    h3 { font-size: 18px; }
+    h4 { font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+    p { margin: 0 0 12px; color: var(--muted); font-size: 16px; }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      min-height: 620px;
+      grid-template-columns: 0.98fr 1.02fr;
+      min-height: 680px;
     }
     .hero-copy {
-      padding: 42px 38px 34px;
+      position: relative;
+      z-index: 1;
+      padding: 42px 40px 36px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    }
+    .hero-copy::before {
+      content: "";
+      position: absolute;
+      inset: 0;
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.78), rgba(255,255,255,0.94));
+        radial-gradient(circle at 10% 12%, rgba(255, 179, 71, 0.12), transparent 22%),
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+      pointer-events: none;
     }
     .hero-media {
       position: relative;
-      min-height: 380px;
+      min-height: 420px;
       background-image:
-        linear-gradient(180deg, rgba(17, 24, 31, 0.12), rgba(17, 24, 31, 0.42)),
-        url('https://www.encontrasaojosedoriopreto.com.br/imgs/imagens-sao-jose-do-rio-preto/eletricista-em-sao-jose-do-rio-preto.jpg');
+        linear-gradient(180deg, rgba(8, 13, 20, 0.08), rgba(8, 13, 20, 0.48)),
+        url('hero.jpg');
       background-size: cover;
-      background-position: center;
+      background-position: center center;
     }
     .hero-media::after {
       content: "";
       position: absolute;
-      inset: 20px;
-      border: 1px solid rgba(255,255,255,0.34);
-      border-radius: 22px;
+      inset: 26px;
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 26px;
       pointer-events: none;
+    }
+    .hero-media::before {
+      content: "";
+      position: absolute;
+      inset: auto 24px 24px auto;
+      width: 170px;
+      height: 170px;
+      border-radius: 30px;
+      background:
+        linear-gradient(160deg, rgba(255, 179, 71, 0.22), rgba(54, 211, 195, 0.12));
+      border: 1px solid rgba(255,255,255,0.18);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 16px 30px rgba(0,0,0,0.18);
     }
     .brand-kicker {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       margin-bottom: 16px;
-      color: var(--deep);
+      color: rgba(255,255,255,0.8);
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.08em;
@@ -98,7 +143,7 @@
       content: "";
       width: 28px;
       height: 1px;
-      background: rgba(21, 24, 29, 0.28);
+      background: rgba(255,255,255,0.24);
     }
     .eyebrow {
       display: flex;
@@ -110,18 +155,19 @@
       display: inline-block;
       padding: 7px 12px;
       border-radius: 999px;
-      background: rgba(36, 52, 67, 0.08);
-      border: 1px solid rgba(36, 52, 67, 0.12);
-      color: var(--deep-soft);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.82);
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
     .lede {
-      max-width: 34ch;
-      font-size: 18px;
-      line-height: 1.55;
+      max-width: 32ch;
+      font-size: 19px;
+      line-height: 1.58;
+      color: rgba(255,255,255,0.72);
     }
     .cta {
       display: inline-flex;
@@ -132,12 +178,12 @@
       padding: 15px 22px;
       border-radius: 999px;
       background: var(--accent);
-      color: #fff8f1;
+      color: #241200;
       font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 12px 30px rgba(241, 136, 53, 0.22);
+      box-shadow: 0 16px 34px rgba(255, 179, 71, 0.24);
     }
-    .cta:hover { background: var(--accent-dark); }
+    .cta:hover { filter: brightness(0.96); }
     .subtle-cta {
       display: inline-flex;
       align-items: center;
@@ -146,28 +192,17 @@
       margin-top: 16px;
       padding: 15px 20px;
       border-radius: 999px;
-      color: var(--ink);
-      border: 1px solid var(--line);
+      color: #f7f7f7;
+      border: 1px solid rgba(255,255,255,0.14);
       text-decoration: none;
-      background: rgba(255,255,255,0.78);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-    }
-    .item {
-      padding: 20px;
-      border-radius: 22px;
-      background: rgba(255,255,255,0.74);
-      border: 1px solid rgba(31, 41, 55, 0.08);
+      background: rgba(255,255,255,0.04);
     }
     .badge {
       display: inline-block;
       padding: 6px 10px;
       border-radius: 999px;
-      background: rgba(215, 192, 161, 0.34);
-      color: #7d541e;
+      background: rgba(255, 179, 71, 0.18);
+      color: #ffd28d;
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
@@ -183,26 +218,18 @@
     .hero-point {
       padding: 14px 16px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.82);
-      border: 1px solid rgba(21, 24, 29, 0.08);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
     }
     .hero-point strong {
       display: block;
       font-size: 16px;
-      color: var(--ink);
+      color: #f6f6f6;
       margin-bottom: 4px;
     }
     .hero-point span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .demo-note {
-      margin-top: 24px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      background: rgba(24, 35, 47, 0.05);
-      border: 1px solid rgba(24, 35, 47, 0.09);
-      color: var(--deep-soft);
+      color: rgba(255,255,255,0.66);
       font-size: 14px;
     }
     .meta {
@@ -210,9 +237,48 @@
       gap: 12px;
       flex-wrap: wrap;
       margin-top: 18px;
-      color: var(--deep-soft);
+      color: rgba(255,255,255,0.68);
       font-size: 14px;
       font-weight: 500;
+    }
+    .offer-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 26px;
+    }
+    .offer-card {
+      padding: 18px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .offer-card h4 {
+      color: rgba(255,255,255,0.54);
+      margin-bottom: 10px;
+    }
+    .offer-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+    }
+    .offer-card li {
+      position: relative;
+      padding-left: 16px;
+      color: rgba(255,255,255,0.82);
+      font-size: 14px;
+    }
+    .offer-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent-2);
     }
     .service-grid {
       display: grid;
@@ -222,8 +288,8 @@
     .service-card {
       padding: 22px;
       border-radius: 24px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.84), rgba(255,255,255,0.7));
-      border: 1px solid rgba(21, 24, 29, 0.08);
+      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.76));
+      border: 1px solid rgba(16, 23, 34, 0.08);
     }
     .service-number {
       display: inline-flex;
@@ -233,8 +299,8 @@
       height: 34px;
       border-radius: 999px;
       margin-bottom: 16px;
-      background: var(--accent-soft);
-      color: var(--accent-dark);
+      background: rgba(255, 179, 71, 0.18);
+      color: #aa5a00;
       font-size: 13px;
       font-weight: 700;
     }
@@ -260,44 +326,87 @@
       width: 6px;
       height: 6px;
       border-radius: 999px;
-      background: var(--accent);
+      background: var(--accent-2);
     }
-    .trust-band {
+    .proof-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 16px;
-      align-items: stretch;
+      align-items: start;
     }
-    .trust-card {
+    .proof-panel {
       padding: 24px;
       border-radius: 24px;
-      background: rgba(255,255,255,0.76);
-      border: 1px solid rgba(21, 24, 29, 0.08);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .proof-panel p {
+      color: rgba(255,255,255,0.72);
+    }
+    .proof-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+    .proof-list li {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.84);
     }
     .contact-card {
       border-radius: 24px;
-      background: linear-gradient(180deg, var(--deep) 0%, #111923 100%);
-      color: #ecf4fb;
+      background: linear-gradient(180deg, #fff7ee 0%, #f4e7d8 100%);
+      color: var(--ink);
       padding: 24px;
-      height: 100%;
+      min-height: 100%;
     }
     .contact-card p {
-      color: rgba(236, 244, 251, 0.78);
+      color: var(--muted);
     }
     .contact-card .cta {
       width: 100%;
       margin-top: 8px;
-      background: #fff4e7;
-      color: #8d4d16;
+      background: #0f1722;
+      color: #f7f7f7;
     }
     .contact-card .cta:hover {
-      background: #ffe7ce;
+      background: #132031;
     }
-    .closing {
+    .close-grid {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 1fr 260px;
       gap: 18px;
-      align-items: center;
+      align-items: stretch;
+    }
+    .close-main,
+    .close-side {
+      border-radius: 24px;
+      padding: 24px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(16, 23, 34, 0.08);
+    }
+    .close-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: linear-gradient(180deg, #fff8ef 0%, #f4e4cf 100%);
+    }
+    .close-main p,
+    .close-side p {
+      color: var(--muted);
+    }
+    .demo-note {
+      margin-top: 22px;
+      padding: 15px 16px;
+      border-radius: 16px;
+      background: rgba(16, 23, 34, 0.04);
+      border: 1px solid rgba(16, 23, 34, 0.08);
+      color: #405062;
+      font-size: 14px;
     }
     .sticky-cta {
       display: none;
@@ -308,7 +417,7 @@
       z-index: 20;
       padding: 12px;
       border-radius: 22px;
-      background: rgba(18, 25, 34, 0.94);
+      background: rgba(14, 22, 33, 0.96);
       box-shadow: 0 22px 60px rgba(0, 0, 0, 0.22);
       backdrop-filter: blur(10px);
     }
@@ -321,23 +430,25 @@
       text-decoration: none;
     }
     .footer {
-      color: #74695d;
+      color: rgba(255,255,255,0.62);
       font-size: 13px;
       text-align: center;
-      padding-top: 4px;
+      padding-top: 8px;
     }
     @media (max-width: 640px) {
-      h1 { font-size: 42px; max-width: 11ch; }
+      h1 { font-size: 44px; max-width: 10ch; }
       .hero, .section { padding: 20px; }
       .wrap { padding-bottom: 120px; }
       .subtle-cta { margin-left: 0; display: block; width: fit-content; }
-      .closing { grid-template-columns: 1fr; }
+      .close-grid { grid-template-columns: 1fr; }
       .sticky-cta { display: block; }
     }
     @media (max-width: 860px) {
       .hero-grid,
+      .offer-strip,
       .service-grid,
-      .trust-band { grid-template-columns: 1fr; }
+      .proof-grid,
+      .close-grid { grid-template-columns: 1fr; }
       .hero-media { min-height: 300px; order: -1; }
       .hero-copy { padding: 28px 24px 24px; }
       .hero-points { grid-template-columns: 1fr; }
@@ -346,20 +457,44 @@
 </head>
 <body>
   <div class="wrap">
-    <section class="hero">
+    <section class="hero-shell">
       <div class="hero-grid">
         <div class="hero-copy">
           <div>
             <div class="brand-kicker">WhatsApp-first preview</div>
             <div class="eyebrow">
               <div class="badge">electrician em Sao Jose do Rio Preto</div>
-              <div class="pill">preview demonstrativo</div>
+              <div class="pill">feito para abrir no celular</div>
             </div>
             <h1>Carlos Roberto Queiroz Eletricista</h1>
-            <p class="lede">Carlos Roberto Queiroz Eletricista atende Sao Jose do Rio Preto com foco em servicos eletricos residenciais e comerciais, contato rapido no WhatsApp e apresentacao profissional para novos clientes.</p>
+            <p class="lede">Instalacoes, manutencao e reparos eletricos em Sao Jose do Rio Preto, com apresentacao mais forte no celular e CTA direta para WhatsApp.</p>
             <div class="meta">
               <span>Rua Comendador Nicolau Lopes Rossi, 921 - Cristo Rei, Sao Jose do Rio Preto</span>
               <span>+55 17 3238-2773</span>
+            </div>
+            <div class="offer-strip">
+              <div class="offer-card">
+                <h4>Servicos em destaque</h4>
+                <ul>
+                  <li>instalacao de luminarias, tomadas e ventiladores</li><li>troca de disjuntores, chuveiros e revisao de fiacao</li><li>apoio residencial, comercial e pequenos reparos urgentes</li>
+                </ul>
+              </div>
+              <div class="offer-card">
+                <h4>Primeira impressao</h4>
+                <ul>
+                  <li>visual mais premium</li>
+                  <li>servicos mais claros</li>
+                  <li>mais confianca no celular</li>
+                </ul>
+              </div>
+              <div class="offer-card">
+                <h4>Objetivo</h4>
+                <ul>
+                  <li>mais cliques no WhatsApp</li>
+                  <li>menos friccao para pedir orcamento</li>
+                  <li>presenca mais profissional</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div>
@@ -385,7 +520,8 @@
       </div>
     </section>
     <section class="section" id="servicos">
-      <h2>Servicos</h2>
+      <h2>O que o cliente encontra rapido</h2>
+      <p>Em vez de uma pagina vazia ou generica, a estrutura abaixo deixa claro o que a empresa oferece e facilita o pedido de orcamento.</p>
       <div class="service-grid">
         <div class="service-card">
           <div class="service-number">01</div>
@@ -410,27 +546,39 @@
         </div>
       </div>
     </section>
-    <section class="section">
-      <div class="trust-band">
-        <div class="trust-card">
-          <h2>Por que essa pagina funciona melhor</h2>
-          <p>Uma pagina melhor posiciona Carlos Roberto Queiroz Eletricista com mais clareza, passa mais confianca e transforma visitas em contatos reais.</p>
-          <p>Base em Rua Comendador Nicolau Lopes Rossi, 921 - Cristo Rei, Sao Jose do Rio Preto. Atendimento em Sao Jose do Rio Preto e regiao.</p>
+    <section class="section dark">
+      <div class="proof-grid">
+        <div class="proof-panel">
+          <h2>Por que essa versao converte melhor</h2>
+          <p>A pessoa bate o olho, entende o que voce faz, ve area de atendimento, lista de servicos e chama no WhatsApp sem ficar perdida.</p>
+          <ul class="proof-list">
+            <li>servicos separados por blocos claros</li>
+            <li>imagem principal mais forte e profissional</li>
+            <li>CTA de WhatsApp repetida nos pontos certos</li>
+            <li>estrutura mais convincente para quem chega pelo celular</li>
+          </ul>
         </div>
         <div class="contact-card">
           <h2>WhatsApp em destaque</h2>
-          <p>Quem encontra Carlos Roberto Queiroz Eletricista no celular precisa entender o servico e chamar no WhatsApp em segundos.</p>
+          <p>Sem formulario longo. O cliente abre, entende os servicos e manda mensagem em segundos.</p>
+          <p>Base em Rua Comendador Nicolau Lopes Rossi, 921 - Cristo Rei, Sao Jose do Rio Preto. Atendimento em Sao Jose do Rio Preto e regiao.</p>
           <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Chamar no WhatsApp</a>
         </div>
       </div>
     </section>
     <section class="section">
-      <div class="closing">
-        <div>
-          <h2>Presenca mais forte, sem complicar</h2>
-          <p>O objetivo aqui nao e parecer uma startup. E fazer a empresa parecer mais profissional, mais confiavel e mais facil de contratar.</p>
+      <div class="close-grid">
+        <div class="close-main">
+          <h2>Presenca mais forte, sem parecer template barato</h2>
+          <p>O objetivo aqui nao e parecer uma startup. E fazer a empresa parecer mais profissional, mais confiavel e mais facil de contratar no momento em que a pessoa abre o link no WhatsApp.</p>
         </div>
-        <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Falar agora</a>
+        <div class="close-side">
+          <div>
+            <h3>Acao principal</h3>
+            <p>Levar o visitante direto para conversa.</p>
+          </div>
+          <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Falar agora</a>
+        </div>
       </div>
       <div class="demo-note">
         Esta pagina e uma previa demonstrativa criada para mostrar como Carlos Roberto Queiroz Eletricista
