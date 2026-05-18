@@ -1,0 +1,116 @@
+{
+  "_README": "Copy this file to clients/<your-client>.json, fill in the fields, then visit ?c=<your-client>. Every '_field' is a comment for you and is ignored at render. Drop the hero image into the slot via the live preview — it persists locally.",
+
+  "id": "novo-cliente",
+  "label": "Nome do Cliente — Profissão",
+
+  "_phone": "International format, with + and country code. Used for both tap-to-call and wa.me link.",
+  "phone": "+5500000000000",
+
+  "_waText": "Pre-filled message when the customer taps the WhatsApp button.",
+  "waText": "Oi, vim pelo site e queria mais informações.",
+
+  "_placeholder": "Short caption shown over the empty image slot (also stamped on the lower-right when filled).",
+  "placeholder": "imagem editorial — vertical",
+
+  "_portrait": "Path to a small portrait of the business owner (relative to the deployed folder). Empty = fall back to monogram. Used as a 32px circular avatar next to the wordmark.",
+  "portrait": "",
+
+  "_monogram": "Single letter shown in the portrait fallback (when no photo is set).",
+  "monogram": "C",
+
+  "pt": {
+    "name": "NOME DO NEGÓCIO",
+    "subhead": "o que você faz · onde",
+    "trades": "CATEGORIA 1 · CATEGORIA 2 · CATEGORIA 3",
+
+    "_serviceArea": "Small italic-serif line below the trade line. Optional. Single string, no all-caps.",
+    "serviceArea": "atende bairro 1, bairro 2 e bairro 3",
+
+    "_yearsActive": "Appears in footer-right, mono caps. Optional.",
+    "yearsActive": "00 ANOS",
+
+    "_crea": "Brazilian CREA registration. Appears next to yearsActive. Optional.",
+    "crea": "CREA-SP 000.000",
+
+    "_responseTime": "Appears under the WhatsApp button as a reassurance. Optional.",
+    "responseTime": "RESPONDE EM ~X MINUTOS",
+    "heroLines": ["Primeira linha.", "Segunda linha."],
+    "status": "Atendendo agora",
+    "address": "RUA, NÚMERO",
+    "city": "BAIRRO · CIDADE",
+    "hours": "(00) 0000-0000",
+    "primary": "Falar no WhatsApp",
+    "callAction": "ou ligar agora",
+
+    "_lastVisit": "Single static line (used when 'Live ticker' tweak is off).",
+    "lastVisit": "ÚLT. ATEND. · HOJE · DESCRIÇÃO CURTA",
+
+    "_lastVisits": "Used when 'Live ticker' tweak is on. Rotates every 4.5s.",
+    "lastVisits": [
+      "AGORA · DESCRIÇÃO",
+      "HÁ 2H · DESCRIÇÃO",
+      "ONTEM · DESCRIÇÃO"
+    ],
+
+    "_recado": "Mock voice intro. recadoDuration is m:ss, animates progress over that span.",
+    "recadoLabel": "OUVIR RECADO",
+    "recadoDuration": "0:15",
+    "recadoTranscript": "Texto do recado que aparece quando o cliente toca play.",
+
+    "_quickReplies": "Used when 'Quick replies' tweak is on — shown in bottom sheet.",
+    "sheetTitle": "Como podemos ajudar?",
+    "quickReplies": [
+      "Opção 1",
+      "Opção 2",
+      "Opção 3"
+    ],
+    "open": "Abrir conversa",
+
+    "_photoFlow": "Used when 'Foto chip' tweak is on.",
+    "photoTitle": "Mandar foto",
+    "photoBody": "Tira uma foto. Eu respondo na hora.",
+    "photoSteps": ["Abre o WhatsApp", "Tira a foto", "Eu retorno em minutos"],
+    "photoCTA": "Abrir WhatsApp e anexar foto",
+    "photoMsg": "Olá, segue foto:",
+
+    "backLabel": "fechar"
+  },
+
+  "_en": "Optional English copy. Delete this whole block if PT-only. The 'Language' tweak only shows EN if this block is present.",
+  "en": {
+    "name": "BUSINESS NAME",
+    "subhead": "what you do · where",
+    "trades": "CATEGORY 1 · CATEGORY 2 · CATEGORY 3",
+    "heroLines": ["First line.", "Second line."],
+    "status": "On call now",
+    "address": "STREET, NUMBER",
+    "city": "DISTRICT · CITY",
+    "hours": "(00) 0000-0000",
+    "primary": "Chat on WhatsApp",
+    "callAction": "or call now",
+
+    "lastVisit": "LAST JOB · TODAY · SHORT DESCRIPTION",
+    "lastVisits": [
+      "NOW · DESCRIPTION",
+      "2H AGO · DESCRIPTION",
+      "YESTERDAY · DESCRIPTION"
+    ],
+
+    "recadoLabel": "PLAY MESSAGE",
+    "recadoDuration": "0:15",
+    "recadoTranscript": "Voice intro text shown when the customer taps play.",
+
+    "sheetTitle": "How can we help?",
+    "quickReplies": ["Option 1", "Option 2", "Option 3"],
+    "open": "Open chat",
+
+    "photoTitle": "Send a photo",
+    "photoBody": "Snap a photo. I reply right away.",
+    "photoSteps": ["Open WhatsApp", "Take a photo", "I get back in minutes"],
+    "photoCTA": "Open WhatsApp to attach",
+    "photoMsg": "Hi, here's a photo:",
+
+    "backLabel": "close"
+  }
+}

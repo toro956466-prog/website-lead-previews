@@ -1,0 +1,165 @@
+{
+  "id": "carlos",
+  "label": "Carlos R. Queiroz — Eletricista",
+  "phone": "+551732382773",
+  "waText": "Oi, vim pelo site do Carlos Roberto e queria pedir um orçamento.",
+  "placeholder": "panel close-up — vertical",
+  "portrait": "",
+  "monogram": "C",
+  "serviceImages": {
+    "instalacoes": "images/carlos-instalacoes.jpg",
+    "manutencao": "images/carlos-manutencao.jpg",
+    "emergencia": "images/carlos-emergencia.jpg",
+    "quadro": "images/carlos-quadro.jpg"
+  },
+
+  "pt": {
+    "name": "CARLOS R. QUEIROZ",
+    "subhead": "eletricista · são josé do rio preto",
+    "trades": "RESIDENCIAL · COMERCIAL · EMERGÊNCIA",
+    "serviceArea": "atende cristo rei, vila nova, eldorado, boa vista e centro",
+    "yearsActive": "12 ANOS",
+    "crea": "CREA-SP 000.000",
+    "responseTime": "RESPONDE EM ~5 MINUTOS",
+    "heroLines": ["Luz que volta.", "Sem drama."],
+    "status": "Atendendo agora",
+    "address": "R. N. L. ROSSI, 921",
+    "city": "CRISTO REI · SJ RIO PRETO",
+    "hours": "(17) 3238‑2773",
+    "primary": "Falar no WhatsApp",
+    "callAction": "ou ligar agora",
+
+    "services": [
+      {
+        "slug": "instalacoes",
+        "label": "INSTALAÇÕES",
+        "title": "Tomadas, chuveiros, luminárias.",
+        "caption": "Pontos novos, troca de tomadas e interruptores, instalação de chuveiros e ventiladores."
+      },
+      {
+        "slug": "manutencao",
+        "label": "MANUTENÇÃO",
+        "title": "Quando a luz some.",
+        "caption": "Queda de energia, curto-circuito, troca de disjuntores, revisão de fiação."
+      },
+      {
+        "slug": "emergencia",
+        "label": "EMERGÊNCIA",
+        "title": "Hoje, não amanhã.",
+        "caption": "Atendimento rápido em Rio Preto e região. Orçamento à distância pelo WhatsApp."
+      },
+      {
+        "slug": "quadro",
+        "label": "QUADRO ELÉTRICO",
+        "title": "O coração da casa.",
+        "caption": "Adequações, troca de quadro, melhorias para casas mais antigas."
+      }
+    ],
+
+    "lastVisit": "ÚLT. ATEND. · HÁ 2H · TROCA DE DISJUNTOR · VILA NOVA",
+    "lastVisits": [
+      "AGORA · ATENDENDO EM CRISTO REI",
+      "HÁ 2H · TROCA DE DISJUNTOR · VILA NOVA",
+      "HÁ 5H · INSTALAÇÃO DE CHUVEIRO · ELDORADO",
+      "ONTEM · FIAÇÃO DE COZINHA · BOA VISTA",
+      "ONTEM · TOMADAS DE ÁREA · SOLO SAGRADO"
+    ],
+
+    "recadoLabel": "OUVIR RECADO",
+    "recadoDuration": "0:15",
+    "recadoTranscript": "Oi, sou o Carlos. Faço serviço elétrico em Rio Preto há mais de 12 anos. Manda a foto que eu te respondo na hora.",
+
+    "sheetTitle": "Qual o problema?",
+    "quickReplies": [
+      "Queda de luz / curto-circuito",
+      "Tomada ou interruptor",
+      "Quadro de disjuntores / fiação",
+      "Chuveiro / ventilador / luminária",
+      "Orçamento à distância"
+    ],
+    "open": "Abrir conversa",
+
+    "photoTitle": "Mandar foto do problema",
+    "photoBody": "Tira uma foto do que está acontecendo. Eu respondo com orçamento e horário.",
+    "photoSteps": ["Abre o WhatsApp", "Tira / escolhe a foto", "Eu retorno em minutos"],
+    "photoCTA": "Abrir WhatsApp e anexar foto",
+    "photoMsg": "Olá Carlos, segue foto do problema:",
+
+    "backLabel": "fechar"
+  },
+
+  "en": {
+    "name": "CARLOS R. QUEIROZ",
+    "subhead": "electrician · são josé do rio preto",
+    "trades": "RESIDENTIAL · COMMERCIAL · EMERGENCY",
+    "serviceArea": "serves cristo rei, vila nova, eldorado, boa vista and downtown",
+    "yearsActive": "12 YEARS",
+    "crea": "CREA-SP 000.000",
+    "responseTime": "REPLIES IN ~5 MINUTES",
+    "heroLines": ["Lights back on.", "No drama."],
+    "status": "On call now",
+    "address": "921 N. L. ROSSI ST.",
+    "city": "CRISTO REI · SJ RIO PRETO",
+    "hours": "(17) 3238‑2773",
+    "primary": "Chat on WhatsApp",
+    "callAction": "or call now",
+
+    "services": [
+      {
+        "slug": "installs",
+        "label": "INSTALLS",
+        "title": "Outlets, showers, fixtures.",
+        "caption": "New points, outlet & switch replacement, water heaters, fans."
+      },
+      {
+        "slug": "repairs",
+        "label": "REPAIRS",
+        "title": "When the lights go out.",
+        "caption": "Power loss, short circuits, breaker swaps, wiring revisions."
+      },
+      {
+        "slug": "emergency",
+        "label": "EMERGENCY",
+        "title": "Today, not tomorrow.",
+        "caption": "Quick response in Rio Preto and region. Remote quotes via WhatsApp."
+      },
+      {
+        "slug": "panel",
+        "label": "BREAKER PANEL",
+        "title": "The heart of the house.",
+        "caption": "Panel upgrades, retrofits, improvements for older homes."
+      }
+    ],
+
+    "lastVisit": "LAST JOB · 2H AGO · BREAKER REPLACED · VILA NOVA",
+    "lastVisits": [
+      "NOW · ON JOB IN CRISTO REI",
+      "2H AGO · BREAKER REPLACED · VILA NOVA",
+      "5H AGO · SHOWER INSTALL · ELDORADO",
+      "YESTERDAY · KITCHEN REWIRE · BOA VISTA",
+      "YESTERDAY · OUTDOOR OUTLETS · SOLO SAGRADO"
+    ],
+
+    "recadoLabel": "PLAY MESSAGE",
+    "recadoDuration": "0:15",
+    "recadoTranscript": "Hi, I'm Carlos. I've been an electrician in Rio Preto for over 12 years. Send a photo and I'll get back to you right away.",
+
+    "sheetTitle": "What's wrong?",
+    "quickReplies": [
+      "Power out / short circuit",
+      "Outlet or switch",
+      "Breaker panel / wiring",
+      "Shower / fan / light fixture",
+      "Remote quote"
+    ],
+    "open": "Open chat",
+
+    "photoTitle": "Send a photo",
+    "photoBody": "Snap a photo of what's wrong. I reply with a quote and a time slot.",
+    "photoSteps": ["Open WhatsApp", "Take / attach photo", "I get back in minutes"],
+    "photoCTA": "Open WhatsApp to attach",
+    "photoMsg": "Hi Carlos, here's a photo of the problem:",
+
+    "backLabel": "close"
+  }
+}
