@@ -1,0 +1,165 @@
+{
+  "id": "high-tech",
+  "label": "High Tech Instalações",
+  "phone": "+5517981424275",
+  "waText": "Oi, vim pelo site da High Tech Instalações e queria pedir um orçamento.",
+  "placeholder": "panel close-up — vertical",
+  "portrait": "",
+  "monogram": "H",
+  "serviceImages": {
+    "instalacoes": "images/carlos-instalacoes.jpg",
+    "manutencao": "images/carlos-manutencao.jpg",
+    "emergencia": "images/carlos-emergencia.jpg",
+    "quadro": "images/carlos-quadro.jpg"
+  },
+
+  "pt": {
+    "name": "HIGH TECH",
+    "subhead": "instalações elétricas · são josé do rio preto",
+    "trades": "ELÉTRICA · AR-CONDICIONADO · MANUTENÇÃO",
+    "serviceArea": "atende jardim santa catarina, rio preto e região",
+    "yearsActive": "",
+    "crea": "",
+    "responseTime": "ORÇAMENTO PELO WHATSAPP",
+    "heroLines": ["Instalação certa.", "Resposta rápida."],
+    "status": "Atendendo agora",
+    "address": "Av. das Vivendas, 533",
+    "city": "JARDIM SANTA CATARINA · SJ RIO PRETO",
+    "hours": "(17) 98142-4275",
+    "primary": "Falar no WhatsApp",
+    "callAction": "ou ligar agora",
+
+    "services": [
+      {
+        "slug": "instalacoes",
+        "label": "INSTALAÇÕES",
+        "title": "Tomadas, chuveiros, luminárias.",
+        "caption": "Pontos novos, troca de tomadas e interruptores, instalação elétrica residencial e comercial."
+      },
+      {
+        "slug": "manutencao",
+        "label": "MANUTENÇÃO",
+        "title": "Quando a energia falha.",
+        "caption": "Queda de energia, curto-circuito, troca de disjuntores, revisão de fiação e manutenção."
+      },
+      {
+        "slug": "emergencia",
+        "label": "EMERGÊNCIA",
+        "title": "Rápido no atendimento.",
+        "caption": "Atendimento em Rio Preto e região. Orçamento à distância pelo WhatsApp."
+      },
+      {
+        "slug": "quadro",
+        "label": "AR-CONDICIONADO",
+        "title": "Elétrica e climatização.",
+        "caption": "Instalações elétricas e de ar-condicionado com atendimento direto pelo celular."
+      }
+    ],
+
+    "lastVisit": "ATENDIMENTO · ELÉTRICA E AR · RIO PRETO",
+    "lastVisits": [
+      "AGORA · ATENDENDO EM RIO PRETO",
+      "INSTALAÇÃO ELÉTRICA · RESIDENCIAL",
+      "MANUTENÇÃO · DISJUNTORES E FIAÇÃO",
+      "AR-CONDICIONADO · INSTALAÇÃO",
+      "ORÇAMENTO DIRETO NO WHATSAPP"
+    ],
+
+    "recadoLabel": "OUVIR RECADO",
+    "recadoDuration": "0:15",
+    "recadoTranscript": "Oi, aqui é a High Tech. Trabalhamos com instalações elétricas e ar-condicionado em Rio Preto. Manda a foto que respondemos pelo WhatsApp.",
+
+    "sheetTitle": "Qual o problema?",
+    "quickReplies": [
+      "Queda de luz / curto-circuito",
+      "Tomada ou interruptor",
+      "Quadro de disjuntores / fiação",
+      "Chuveiro / ventilador / luminária",
+      "Orçamento à distância"
+    ],
+    "open": "Abrir conversa",
+
+    "photoTitle": "Mandar foto do problema",
+    "photoBody": "Tira uma foto do que está acontecendo. Eu respondo com orçamento e horário.",
+    "photoSteps": ["Abre o WhatsApp", "Tira / escolhe a foto", "Eu retorno em minutos"],
+    "photoCTA": "Abrir WhatsApp e anexar foto",
+    "photoMsg": "Olá, segue foto do problema para orçamento:",
+
+    "backLabel": "fechar"
+  },
+
+  "en": {
+    "name": "HIGH TECH",
+    "subhead": "electrical installations · são josé do rio preto",
+    "trades": "ELECTRICAL · AC · MAINTENANCE",
+    "serviceArea": "serves jardim santa catarina, rio preto and nearby areas",
+    "yearsActive": "",
+    "crea": "",
+    "responseTime": "QUOTES BY WHATSAPP",
+    "heroLines": ["Clean installation.", "Fast response."],
+    "status": "On call now",
+    "address": "533 AV. DAS VIVENDAS",
+    "city": "JARDIM SANTA CATARINA · SJ RIO PRETO",
+    "hours": "(17) 98142-4275",
+    "primary": "Chat on WhatsApp",
+    "callAction": "or call now",
+
+    "services": [
+      {
+        "slug": "installs",
+        "label": "INSTALLS",
+        "title": "Outlets, showers, fixtures.",
+        "caption": "New points, outlet & switch replacement, residential and commercial electrical installs."
+      },
+      {
+        "slug": "repairs",
+        "label": "REPAIRS",
+        "title": "When power fails.",
+        "caption": "Power loss, short circuits, breaker swaps, wiring revisions and maintenance."
+      },
+      {
+        "slug": "emergency",
+        "label": "EMERGENCY",
+        "title": "Fast response.",
+        "caption": "Quick response in Rio Preto and region. Remote quotes via WhatsApp."
+      },
+      {
+        "slug": "panel",
+        "label": "AIR CONDITIONING",
+        "title": "Electrical + cooling.",
+        "caption": "Electrical and air-conditioning installation with direct WhatsApp contact."
+      }
+    ],
+
+    "lastVisit": "SERVICE · ELECTRICAL + AC · RIO PRETO",
+    "lastVisits": [
+      "NOW · SERVING RIO PRETO",
+      "ELECTRICAL INSTALLATION · RESIDENTIAL",
+      "MAINTENANCE · BREAKERS AND WIRING",
+      "AIR CONDITIONING · INSTALL",
+      "QUOTE DIRECTLY ON WHATSAPP"
+    ],
+
+    "recadoLabel": "PLAY MESSAGE",
+    "recadoDuration": "0:15",
+    "recadoTranscript": "Hi, this is High Tech. We handle electrical installations and air-conditioning in Rio Preto. Send a photo and we will reply on WhatsApp.",
+
+    "sheetTitle": "What's wrong?",
+    "quickReplies": [
+      "Power out / short circuit",
+      "Outlet or switch",
+      "Breaker panel / wiring",
+      "Shower / fan / light fixture",
+      "Remote quote"
+    ],
+    "open": "Open chat",
+
+    "photoTitle": "Send a photo",
+    "photoBody": "Snap a photo of what's wrong. I reply with a quote and a time slot.",
+    "photoSteps": ["Open WhatsApp", "Take / attach photo", "I get back in minutes"],
+    "photoCTA": "Open WhatsApp to attach",
+    "photoMsg": "Hello, here's a photo of the problem for a quote:",
+
+    "backLabel": "close"
+  }
+}
