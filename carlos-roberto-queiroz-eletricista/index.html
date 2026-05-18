@@ -9,82 +9,63 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0f1722;
-      --bg-soft: #121d2a;
-      --card: #f7f1e7;
-      --card-2: #f1e7d8;
-      --ink: #101722;
-      --muted: #5e6775;
-      --accent: #ffb347;
-      --accent-2: #36d3c3;
-      --line: rgba(255, 255, 255, 0.08);
-      --line-dark: rgba(16, 23, 34, 0.1);
-      --panel: rgba(247, 241, 231, 0.96);
-      --shadow: 0 28px 80px rgba(2, 6, 23, 0.28);
+      --bg: #08111d;
+      --bg-2: #0d1a2a;
+      --ink: #f7f9fc;
+      --muted: rgba(240, 245, 252, 0.70);
+      --card: rgba(255, 255, 255, 0.08);
+      --card-strong: rgba(255, 255, 255, 0.12);
+      --paper: #f6efe4;
+      --paper-2: #efe3d0;
+      --paper-ink: #131b27;
+      --paper-muted: #5e6675;
+      --line: rgba(255, 255, 255, 0.10);
+      --line-dark: rgba(19, 27, 39, 0.10);
+      --amber: #ffb347;
+      --amber-strong: #ff9f1a;
+      --teal: #43dbc8;
+      --success: #7df7a3;
+      --shadow: 0 28px 90px rgba(0, 0, 0, 0.24);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(255, 179, 71, 0.26), transparent 18%),
-        radial-gradient(circle at top right, rgba(54, 211, 195, 0.14), transparent 20%),
-        linear-gradient(180deg, #0f1722 0%, #111b28 42%, #e9dfcf 42%, #efe6d8 100%);
-      color: #fefefe;
+        radial-gradient(circle at top left, rgba(255, 179, 71, 0.18), transparent 16%),
+        radial-gradient(circle at top right, rgba(67, 219, 200, 0.15), transparent 18%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 44%, #e9ddcc 44%, #f2e8da 100%);
+      color: var(--ink);
       line-height: 1.5;
     }
     .wrap {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 24px 18px 110px;
+      padding: 22px 18px 110px;
     }
-    .hero-shell {
+    .hero {
       position: relative;
+      overflow: hidden;
       margin-bottom: 18px;
       border-radius: 34px;
-      overflow: hidden;
-      background:
-        linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03)),
-        linear-gradient(180deg, #121d2a 0%, #0f1823 100%);
       border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-    .section {
-      background: var(--panel);
-      color: var(--ink);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 30px;
-      padding: 28px;
-      margin-bottom: 18px;
-      box-shadow: 0 20px 55px rgba(17, 24, 39, 0.08);
-    }
-    .section.dark {
       background:
-        linear-gradient(160deg, #132031 0%, #0d1620 100%);
-      color: #f7f7f7;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+        linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)),
+        linear-gradient(180deg, #0d1724 0%, #101d2d 100%);
       box-shadow: var(--shadow);
     }
-    h1, h2, h3, h4 { margin: 0 0 12px; }
-    h1 {
-      font-size: 64px;
-      line-height: 0.92;
-      letter-spacing: -0.06em;
-      max-width: 8ch;
-    }
-    h2 { font-size: 30px; letter-spacing: -0.04em; }
-    h3 { font-size: 18px; }
-    h4 { font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
-    p { margin: 0 0 12px; color: var(--muted); font-size: 16px; }
     .hero-grid {
       display: grid;
-      grid-template-columns: 0.98fr 1.02fr;
-      min-height: 680px;
+      grid-template-columns: 0.92fr 1.08fr;
+      min-height: 740px;
     }
     .hero-copy {
       position: relative;
-      z-index: 1;
-      padding: 42px 40px 36px;
+      z-index: 2;
+      padding: 40px 38px 36px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -94,202 +75,291 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at 10% 12%, rgba(255, 179, 71, 0.12), transparent 22%),
-        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+        radial-gradient(circle at 12% 18%, rgba(255,179,71,0.12), transparent 24%);
       pointer-events: none;
     }
     .hero-media {
       position: relative;
-      min-height: 420px;
+      min-height: 440px;
       background-image:
-        linear-gradient(180deg, rgba(8, 13, 20, 0.08), rgba(8, 13, 20, 0.48)),
+        linear-gradient(180deg, rgba(7, 12, 18, 0.08), rgba(7, 12, 18, 0.42)),
         url('hero.jpg');
       background-size: cover;
-      background-position: center center;
+      background-position: center;
     }
     .hero-media::after {
       content: "";
       position: absolute;
-      inset: 26px;
-      border: 1px solid rgba(255,255,255,0.22);
-      border-radius: 26px;
+      inset: 22px;
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,0.16);
       pointer-events: none;
     }
-    .hero-media::before {
-      content: "";
-      position: absolute;
-      inset: auto 24px 24px auto;
-      width: 170px;
-      height: 170px;
-      border-radius: 30px;
-      background:
-        linear-gradient(160deg, rgba(255, 179, 71, 0.22), rgba(54, 211, 195, 0.12));
-      border: 1px solid rgba(255,255,255,0.18);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 16px 30px rgba(0,0,0,0.18);
-    }
-    .brand-kicker {
+    .brand {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 16px;
-      color: rgba(255,255,255,0.8);
+      gap: 10px;
+      margin-bottom: 18px;
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.08em;
       text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.78);
     }
-    .brand-kicker::before {
+    .brand::before {
       content: "";
-      width: 28px;
+      width: 30px;
       height: 1px;
-      background: rgba(255,255,255,0.24);
+      background: rgba(255,255,255,0.22);
     }
-    .eyebrow {
+    .hero-tags {
       display: flex;
-      gap: 10px;
       flex-wrap: wrap;
+      gap: 10px;
       margin-bottom: 16px;
     }
-    .pill {
-      display: inline-block;
-      padding: 7px 12px;
+    .tag, .ghost-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.82);
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
+    .tag {
+      background: rgba(255,179,71,0.16);
+      color: #ffd79c;
+      border: 1px solid rgba(255,179,71,0.22);
+    }
+    .ghost-tag {
+      background: rgba(255,255,255,0.07);
+      color: rgba(255,255,255,0.82);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    h1, h2, h3, h4 { margin: 0 0 12px; }
+    h1 {
+      max-width: 8ch;
+      font-size: 66px;
+      line-height: 0.90;
+      letter-spacing: -0.065em;
+    }
+    h2 {
+      font-size: 31px;
+      line-height: 1.0;
+      letter-spacing: -0.045em;
+      color: var(--paper-ink);
+    }
+    h3 { font-size: 18px; }
+    h4 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 16px;
+    }
     .lede {
-      max-width: 32ch;
+      max-width: 31ch;
       font-size: 19px;
       line-height: 1.58;
       color: rgba(255,255,255,0.72);
     }
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 16px;
-      padding: 15px 22px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: #241200;
-      font-weight: 700;
-      text-decoration: none;
-      box-shadow: 0 16px 34px rgba(255, 179, 71, 0.24);
-    }
-    .cta:hover { filter: brightness(0.96); }
-    .subtle-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 10px;
-      margin-top: 16px;
-      padding: 15px 20px;
-      border-radius: 999px;
-      color: #f7f7f7;
-      border: 1px solid rgba(255,255,255,0.14);
-      text-decoration: none;
-      background: rgba(255,255,255,0.04);
-    }
-    .badge {
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(255, 179, 71, 0.18);
-      color: #ffd28d;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 14px;
-    }
-    .hero-points {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 18px;
-    }
-    .hero-point {
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-    }
-    .hero-point strong {
-      display: block;
-      font-size: 16px;
-      color: #f6f6f6;
-      margin-bottom: 4px;
-    }
-    .hero-point span {
-      color: rgba(255,255,255,0.66);
-      font-size: 14px;
-    }
     .meta {
       display: flex;
-      gap: 12px;
       flex-wrap: wrap;
+      gap: 12px;
       margin-top: 18px;
       color: rgba(255,255,255,0.68);
       font-size: 14px;
       font-weight: 500;
     }
-    .offer-strip {
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+    .cta, .cta-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform .18s ease, filter .18s ease;
+    }
+    .cta {
+      background: linear-gradient(180deg, #ffc76f 0%, var(--amber) 100%);
+      color: #261400;
+      box-shadow: 0 16px 40px rgba(255,179,71,0.24);
+    }
+    .cta-ghost {
+      color: var(--ink);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+    .cta:hover, .cta-ghost:hover {
+      transform: translateY(-1px);
+      filter: brightness(0.98);
+    }
+    .signal-row {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0,1fr));
       gap: 12px;
-      margin-top: 26px;
+      margin-top: 24px;
     }
-    .offer-card {
-      padding: 18px;
-      border-radius: 22px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
-      border: 1px solid rgba(255,255,255,0.12);
+    .signal {
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(12px);
     }
-    .offer-card h4 {
-      color: rgba(255,255,255,0.54);
-      margin-bottom: 10px;
+    .signal strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #f6f8fa;
+      font-size: 16px;
     }
-    .offer-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 8px;
-    }
-    .offer-card li {
-      position: relative;
-      padding-left: 16px;
-      color: rgba(255,255,255,0.82);
+    .signal span {
+      color: rgba(255,255,255,0.66);
       font-size: 14px;
     }
-    .offer-card li::before {
-      content: "";
+    .float-stack {
       position: absolute;
-      left: 0;
-      top: 9px;
-      width: 6px;
-      height: 6px;
+      inset: auto 18px 18px auto;
+      z-index: 3;
+      width: min(92%, 440px);
+      display: grid;
+      gap: 14px;
+    }
+    .float-card {
+      border-radius: 24px;
+      padding: 18px;
+      background: rgba(8, 16, 26, 0.78);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 44px rgba(0,0,0,0.18);
+    }
+    .float-card.light {
+      background: rgba(247, 239, 228, 0.92);
+      border: 1px solid rgba(19, 27, 39, 0.08);
+      color: var(--paper-ink);
+    }
+    .float-card h4 {
+      margin-bottom: 8px;
+      color: rgba(255,255,255,0.55);
+    }
+    .float-card.light h4 {
+      color: rgba(19, 27, 39, 0.52);
+    }
+    .float-card p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: rgba(255,255,255,0.74);
+    }
+    .float-card.light p {
+      color: var(--paper-muted);
+    }
+    .wa-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
       border-radius: 999px;
-      background: var(--accent-2);
+      background: rgba(125,247,163,0.12);
+      border: 1px solid rgba(125,247,163,0.18);
+      color: #b8ffcf;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .mini-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .mini-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: inherit;
+      text-decoration: none;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .float-card.light .mini-action {
+      background: rgba(19,27,39,0.05);
+      border: 1px solid rgba(19,27,39,0.08);
+    }
+    .pix-grid {
+      display: grid;
+      grid-template-columns: 108px 1fr;
+      gap: 14px;
+      align-items: center;
+    }
+    .pix-qr {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: 3px;
+      width: 108px;
+      height: 108px;
+      padding: 10px;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(19,27,39,0.06);
+    }
+    .pix-qr span {
+      border-radius: 2px;
+      background: transparent;
+    }
+    .pix-qr span.f { background: #101722; }
+    .pix-copy strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--paper-ink);
+      font-size: 18px;
+    }
+    .pix-copy small {
+      display: block;
+      color: var(--paper-muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .section {
+      margin-bottom: 18px;
+      padding: 28px;
+      border-radius: 30px;
+      background: rgba(247,239,228,0.96);
+      border: 1px solid rgba(255,255,255,0.26);
+      box-shadow: 0 20px 55px rgba(17,24,39,0.08);
+      color: var(--paper-ink);
+    }
+    .section p {
+      color: var(--paper-muted);
     }
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0,1fr));
       gap: 14px;
+      margin-top: 18px;
     }
     .service-card {
       padding: 22px;
       border-radius: 24px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.76));
-      border: 1px solid rgba(16, 23, 34, 0.08);
+      background: linear-gradient(180deg, rgba(255,255,255,0.90), rgba(255,255,255,0.72));
+      border: 1px solid var(--line-dark);
     }
     .service-number {
       display: inline-flex;
@@ -297,24 +367,24 @@
       justify-content: center;
       width: 34px;
       height: 34px;
+      margin-bottom: 14px;
       border-radius: 999px;
-      margin-bottom: 16px;
-      background: rgba(255, 179, 71, 0.18);
-      color: #aa5a00;
+      background: rgba(255,179,71,0.20);
+      color: #a35a00;
       font-size: 13px;
       font-weight: 700;
     }
     .service-list {
       list-style: none;
       padding: 0;
-      margin: 16px 0 0;
+      margin: 14px 0 0;
       display: grid;
       gap: 10px;
     }
     .service-list li {
       position: relative;
       padding-left: 16px;
-      color: var(--muted);
+      color: var(--paper-muted);
       font-size: 15px;
       line-height: 1.45;
     }
@@ -326,145 +396,182 @@
       width: 6px;
       height: 6px;
       border-radius: 999px;
-      background: var(--accent-2);
+      background: var(--teal);
     }
-    .proof-grid {
+    .command-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 16px;
-      align-items: start;
     }
-    .proof-panel {
+    .command-panel,
+    .contact-panel {
       padding: 24px;
-      border-radius: 24px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 26px;
+      min-height: 100%;
     }
-    .proof-panel p {
-      color: rgba(255,255,255,0.72);
+    .command-panel {
+      background: linear-gradient(160deg, #101a28 0%, #152337 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #f8fafb;
+      box-shadow: var(--shadow);
     }
-    .proof-list {
+    .command-panel h2,
+    .command-panel h3 {
+      color: #f8fafb;
+    }
+    .command-panel p {
+      color: rgba(248,250,251,0.72);
+    }
+    .command-list {
       list-style: none;
       padding: 0;
-      margin: 20px 0 0;
+      margin: 18px 0 0;
       display: grid;
       gap: 12px;
     }
-    .proof-list li {
+    .command-list li {
       padding: 14px 16px;
       border-radius: 18px;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
       color: rgba(255,255,255,0.84);
     }
-    .contact-card {
-      border-radius: 24px;
-      background: linear-gradient(180deg, #fff7ee 0%, #f4e7d8 100%);
-      color: var(--ink);
-      padding: 24px;
-      min-height: 100%;
+    .contact-panel {
+      background: linear-gradient(180deg, #fff8ef 0%, #f3e5d3 100%);
+      border: 1px solid rgba(19,27,39,0.08);
+      color: var(--paper-ink);
     }
-    .contact-card p {
-      color: var(--muted);
-    }
-    .contact-card .cta {
-      width: 100%;
-      margin-top: 8px;
-      background: #0f1722;
-      color: #f7f7f7;
-    }
-    .contact-card .cta:hover {
-      background: #132031;
+    .contact-panel p {
+      color: var(--paper-muted);
     }
     .close-grid {
       display: grid;
       grid-template-columns: 1fr 260px;
       gap: 18px;
-      align-items: stretch;
     }
-    .close-main,
+    .close-card,
     .close-side {
       border-radius: 24px;
       padding: 24px;
       background: rgba(255,255,255,0.82);
-      border: 1px solid rgba(16, 23, 34, 0.08);
+      border: 1px solid rgba(19,27,39,0.08);
     }
     .close-side {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      background: linear-gradient(180deg, #fff8ef 0%, #f4e4cf 100%);
-    }
-    .close-main p,
-    .close-side p {
-      color: var(--muted);
+      background: linear-gradient(180deg, #fff7ee 0%, #f2e0c8 100%);
     }
     .demo-note {
       margin-top: 22px;
       padding: 15px 16px;
       border-radius: 16px;
-      background: rgba(16, 23, 34, 0.04);
-      border: 1px solid rgba(16, 23, 34, 0.08);
-      color: #405062;
+      background: rgba(19,27,39,0.04);
+      border: 1px solid rgba(19,27,39,0.08);
+      color: #415061;
       font-size: 14px;
     }
-    .sticky-cta {
+    .action-rail {
       display: none;
       position: fixed;
       left: 14px;
       right: 14px;
       bottom: 14px;
-      z-index: 20;
-      padding: 12px;
+      z-index: 25;
+      padding: 10px;
       border-radius: 22px;
-      background: rgba(14, 22, 33, 0.96);
-      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.22);
-      backdrop-filter: blur(10px);
+      background: rgba(10, 17, 27, 0.94);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 22px 60px rgba(0,0,0,0.26);
+      backdrop-filter: blur(12px);
     }
-    .sticky-cta a {
+    .action-rail-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 8px;
+    }
+    .rail-btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
-      margin: 0;
+      min-height: 48px;
+      padding: 10px;
+      border-radius: 16px;
+      color: #f8fafb;
       text-decoration: none;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    .rail-btn.primary {
+      background: linear-gradient(180deg, #ffc76f 0%, var(--amber) 100%);
+      color: #261400;
+      border-color: rgba(255,179,71,0.32);
     }
     .footer {
-      color: rgba(255,255,255,0.62);
-      font-size: 13px;
-      text-align: center;
       padding-top: 8px;
+      text-align: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.62);
     }
-    @media (max-width: 640px) {
-      h1 { font-size: 44px; max-width: 10ch; }
-      .hero, .section { padding: 20px; }
-      .wrap { padding-bottom: 120px; }
-      .subtle-cta { margin-left: 0; display: block; width: fit-content; }
-      .close-grid { grid-template-columns: 1fr; }
-      .sticky-cta { display: block; }
-    }
-    @media (max-width: 860px) {
+    @media (max-width: 980px) {
       .hero-grid,
-      .offer-strip,
-      .service-grid,
-      .proof-grid,
-      .close-grid { grid-template-columns: 1fr; }
-      .hero-media { min-height: 300px; order: -1; }
-      .hero-copy { padding: 28px 24px 24px; }
-      .hero-points { grid-template-columns: 1fr; }
+      .command-grid,
+      .close-grid,
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-media {
+        min-height: 360px;
+        order: -1;
+      }
+      .float-stack {
+        position: static;
+        width: auto;
+        padding: 16px 18px 0;
+      }
+    }
+    @media (max-width: 760px) {
+      h1 {
+        font-size: 46px;
+        max-width: 10ch;
+      }
+      .wrap {
+        padding-bottom: 126px;
+      }
+      .hero-copy,
+      .section {
+        padding: 22px 20px;
+      }
+      .signal-row,
+      .action-rail-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+      .hero-actions {
+        flex-direction: column;
+      }
+      .cta,
+      .cta-ghost {
+        width: 100%;
+      }
+      .action-rail {
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <section class="hero-shell">
+    <section class="hero">
       <div class="hero-grid">
         <div class="hero-copy">
           <div>
-            <div class="brand-kicker">WhatsApp-first preview</div>
-            <div class="eyebrow">
-              <div class="badge">electrician em Sao Jose do Rio Preto</div>
-              <div class="pill">feito para abrir no celular</div>
+            <div class="brand">Mobile business surface</div>
+            <div class="hero-tags">
+              <span class="tag">electrician em Sao Jose do Rio Preto</span>
+              <span class="ghost-tag">WhatsApp-first</span>
             </div>
             <h1>Carlos Roberto Queiroz Eletricista</h1>
             <p class="lede">Instalacoes, manutencao e reparos eletricos em Sao Jose do Rio Preto, com apresentacao mais forte no celular e CTA direta para WhatsApp.</p>
@@ -472,56 +579,62 @@
               <span>Rua Comendador Nicolau Lopes Rossi, 921 - Cristo Rei, Sao Jose do Rio Preto</span>
               <span>+55 17 3238-2773</span>
             </div>
-            <div class="offer-strip">
-              <div class="offer-card">
-                <h4>Servicos em destaque</h4>
-                <ul>
-                  <li>instalacao de luminarias, tomadas e ventiladores</li><li>troca de disjuntores, chuveiros e revisao de fiacao</li><li>apoio residencial, comercial e pequenos reparos urgentes</li>
-                </ul>
-              </div>
-              <div class="offer-card">
-                <h4>Primeira impressao</h4>
-                <ul>
-                  <li>visual mais premium</li>
-                  <li>servicos mais claros</li>
-                  <li>mais confianca no celular</li>
-                </ul>
-              </div>
-              <div class="offer-card">
-                <h4>Objetivo</h4>
-                <ul>
-                  <li>mais cliques no WhatsApp</li>
-                  <li>menos friccao para pedir orcamento</li>
-                  <li>presenca mais profissional</li>
-                </ul>
-              </div>
+            <div class="hero-actions">
+              <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Pedir orcamento</a>
+              <a class="cta-ghost" href="tel:551732382773">Ligar agora</a>
             </div>
-          </div>
-          <div>
-            <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Pedir orcamento</a>
-            <a class="subtle-cta" href="https://www.encontrasaojosedoriopreto.com.br/e/eletricistas-em-sao-jose-do-rio-preto.shtml">Ver localizacao</a>
-            <div class="hero-points">
-              <div class="hero-point">
+            <div class="signal-row">
+              <div class="signal">
                 <strong>Contato rapido</strong>
-                <span>CTA direta para WhatsApp</span>
+                <span>conversa direta no WhatsApp</span>
               </div>
-              <div class="hero-point">
-                <strong>Mais confianca</strong>
-                <span>apresentacao clara do servico</span>
+              <div class="signal">
+                <strong>Visual mais premium</strong>
+                <span>menos cara de diretorio velho</span>
               </div>
-              <div class="hero-point">
-                <strong>Mobile-first</strong>
-                <span>feito para abrir bem no celular</span>
+              <div class="signal">
+                <strong>Feito para celular</strong>
+                <span>o visitante entende em segundos</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="hero-media"></div>
+        <div class="hero-media">
+          <div class="float-stack">
+            <div class="float-card">
+              <div class="wa-pill">Atendimento agora pelo WhatsApp</div>
+              <div class="mini-actions">
+                <a class="mini-action" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Chamar no WhatsApp</a>
+                <a class="mini-action" href="https://www.encontrasaojosedoriopreto.com.br/e/eletricistas-em-sao-jose-do-rio-preto.shtml">Ver localizacao</a>
+              </div>
+            </div>
+            <div class="float-card light" id="pix">
+              <div class="pix-grid">
+                <div class="pix-qr">
+                  <span class="f"></span><span class="f"></span><span class="f"></span><span></span><span></span><span class="f"></span><span class="f"></span><span class="f"></span><span></span>
+                  <span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span>
+                  <span class="f"></span><span class="f"></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span class="f"></span><span class="f"></span>
+                  <span></span><span></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span></span><span></span>
+                  <span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span>
+                  <span class="f"></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span class="f"></span>
+                  <span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span>
+                  <span class="f"></span><span class="f"></span><span class="f"></span><span></span><span></span><span class="f"></span><span class="f"></span><span class="f"></span><span></span>
+                  <span></span><span class="f"></span><span></span><span class="f"></span><span class="f"></span><span></span><span></span><span class="f"></span><span></span>
+                </div>
+                <div class="pix-copy">
+                  <strong>PIX rapido</strong>
+                  <small>Camada opcional para sinal ou reserva. Abre espaco para uma experiencia mais util do que um site brochure normal.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="section" id="servicos">
-      <h2>O que o cliente encontra rapido</h2>
-      <p>Em vez de uma pagina vazia ou generica, a estrutura abaixo deixa claro o que a empresa oferece e facilita o pedido de orcamento.</p>
+
+    <section class="section">
+      <h2>O que o cliente entende rapido</h2>
+      <p>Em vez de cair num link genérico, a pessoa vê serviços, contexto local e ações diretas logo de cara.</p>
       <div class="service-grid">
         <div class="service-card">
           <div class="service-number">01</div>
@@ -546,36 +659,39 @@
         </div>
       </div>
     </section>
-    <section class="section dark">
-      <div class="proof-grid">
-        <div class="proof-panel">
-          <h2>Por que essa versao converte melhor</h2>
+
+    <section class="section">
+      <div class="command-grid">
+        <div class="command-panel">
+          <h2>Mais util que uma homepage comum</h2>
           <p>A pessoa bate o olho, entende o que voce faz, ve area de atendimento, lista de servicos e chama no WhatsApp sem ficar perdida.</p>
-          <ul class="proof-list">
-            <li>servicos separados por blocos claros</li>
-            <li>imagem principal mais forte e profissional</li>
-            <li>CTA de WhatsApp repetida nos pontos certos</li>
-            <li>estrutura mais convincente para quem chega pelo celular</li>
+          <ul class="command-list">
+            <li>estrutura mais parecida com uma superficie de atendimento do que com um site parado</li>
+            <li>acoes principais expostas sem o visitante precisar procurar</li>
+            <li>camadas de WhatsApp, ligacao, localizacao e PIX no mesmo fluxo</li>
+            <li>visual mais moderno sem ficar exagerado ou confuso</li>
           </ul>
         </div>
-        <div class="contact-card">
-          <h2>WhatsApp em destaque</h2>
+        <div class="contact-panel">
+          <h2>Atendimento direto</h2>
           <p>Sem formulario longo. O cliente abre, entende os servicos e manda mensagem em segundos.</p>
           <p>Base em Rua Comendador Nicolau Lopes Rossi, 921 - Cristo Rei, Sao Jose do Rio Preto. Atendimento em Sao Jose do Rio Preto e regiao.</p>
-          <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Chamar no WhatsApp</a>
+          <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Abrir WhatsApp</a>
+          <a class="cta-ghost" href="tel:551732382773">Ligar para +55 17 3238-2773</a>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="close-grid">
-        <div class="close-main">
-          <h2>Presenca mais forte, sem parecer template barato</h2>
-          <p>O objetivo aqui nao e parecer uma startup. E fazer a empresa parecer mais profissional, mais confiavel e mais facil de contratar no momento em que a pessoa abre o link no WhatsApp.</p>
+        <div class="close-card">
+          <h2>Presenca forte, clara e diferente</h2>
+          <p>O foco aqui nao e parecer uma startup ou um tema pronto. E parecer uma empresa local forte, facil de contratar e pronta para converter visita em conversa.</p>
         </div>
         <div class="close-side">
           <div>
             <h3>Acao principal</h3>
-            <p>Levar o visitante direto para conversa.</p>
+            <p>Levar o visitante para contato ou pagamento de forma direta.</p>
           </div>
           <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Falar agora</a>
         </div>
@@ -585,10 +701,17 @@
         pode se apresentar melhor online e transformar visitas em conversas no WhatsApp.
       </div>
     </section>
+
     <div class="footer">Preview demonstrativo criado para prospeccao comercial.</div>
   </div>
-  <div class="sticky-cta">
-    <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Chamar no WhatsApp</a>
+
+  <div class="action-rail">
+    <div class="action-rail-grid">
+      <a class="rail-btn primary" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">WhatsApp</a>
+      <a class="rail-btn" href="tel:551732382773">Ligar</a>
+      <a class="rail-btn" href="https://www.encontrasaojosedoriopreto.com.br/e/eletricistas-em-sao-jose-do-rio-preto.shtml">Mapa</a>
+      <a class="rail-btn" href="#pix">PIX</a>
+    </div>
   </div>
 </body>
 </html>
