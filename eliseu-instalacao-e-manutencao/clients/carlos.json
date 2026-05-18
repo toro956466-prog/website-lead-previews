@@ -1,0 +1,165 @@
+{
+  "id": "eliseu",
+  "label": "Eletricista Instalação e Manutenção Eliseu",
+  "phone": "+551730126258",
+  "waText": "Oi, vim pelo site do Eliseu e queria pedir um orçamento.",
+  "placeholder": "panel close-up — vertical",
+  "portrait": "",
+  "monogram": "E",
+  "serviceImages": {
+    "instalacoes": "images/carlos-instalacoes.jpg",
+    "manutencao": "images/carlos-manutencao.jpg",
+    "emergencia": "images/carlos-emergencia.jpg",
+    "quadro": "images/carlos-quadro.jpg"
+  },
+
+  "pt": {
+    "name": "ELISEU",
+    "subhead": "instalação e manutenção elétrica · são josé do rio preto",
+    "trades": "INSTALAÇÃO · MANUTENÇÃO · ELÉTRICA",
+    "serviceArea": "atende eldorado, rio preto e região",
+    "yearsActive": "",
+    "crea": "",
+    "responseTime": "ORÇAMENTO PELO WHATSAPP",
+    "heroLines": ["Instalação limpa.", "Manutenção rápida."],
+    "status": "Atendendo agora",
+    "address": "Rua Santana do Parnaíba, 3747",
+    "city": "ELDORADO · SJ RIO PRETO",
+    "hours": "(17) 3012-6258",
+    "primary": "Falar no WhatsApp",
+    "callAction": "ou ligar agora",
+
+    "services": [
+      {
+        "slug": "instalacoes",
+        "label": "INSTALAÇÕES",
+        "title": "Tomadas, chuveiros, luminárias.",
+        "caption": "Pontos novos, troca de tomadas e interruptores, instalação elétrica residencial e comercial."
+      },
+      {
+        "slug": "manutencao",
+        "label": "MANUTENÇÃO",
+        "title": "Quando a energia falha.",
+        "caption": "Queda de energia, curto-circuito, troca de disjuntores, revisão de fiação e manutenção."
+      },
+      {
+        "slug": "emergencia",
+        "label": "EMERGÊNCIA",
+        "title": "Rápido no atendimento.",
+        "caption": "Atendimento em Rio Preto e região. Orçamento à distância pelo WhatsApp."
+      },
+      {
+        "slug": "quadro",
+        "label": "REVISÃO",
+        "title": "Instala e revisa.",
+        "caption": "Instalação, revisão e manutenção elétrica para casas e pequenos comércios."
+      }
+    ],
+
+    "lastVisit": "ATENDIMENTO · INSTALAÇÃO E MANUTENÇÃO · RIO PRETO",
+    "lastVisits": [
+      "AGORA · ATENDENDO EM RIO PRETO",
+      "INSTALAÇÃO ELÉTRICA · RESIDENCIAL",
+      "MANUTENÇÃO · DISJUNTORES E FIAÇÃO",
+      "MANUTENÇÃO ELÉTRICA · REVISÃO",
+      "ORÇAMENTO DIRETO NO WHATSAPP"
+    ],
+
+    "recadoLabel": "OUVIR RECADO",
+    "recadoDuration": "0:15",
+    "recadoTranscript": "Oi, aqui é o Eliseu. Faço instalação e manutenção elétrica em Rio Preto. Manda a foto que eu respondo pelo WhatsApp.",
+
+    "sheetTitle": "Qual o problema?",
+    "quickReplies": [
+      "Queda de luz / curto-circuito",
+      "Tomada ou interruptor",
+      "Quadro de disjuntores / fiação",
+      "Chuveiro / ventilador / luminária",
+      "Orçamento à distância"
+    ],
+    "open": "Abrir conversa",
+
+    "photoTitle": "Mandar foto do problema",
+    "photoBody": "Tira uma foto do que está acontecendo. Eu respondo com orçamento e horário.",
+    "photoSteps": ["Abre o WhatsApp", "Tira / escolhe a foto", "Eu retorno em minutos"],
+    "photoCTA": "Abrir WhatsApp e anexar foto",
+    "photoMsg": "Olá, segue foto do problema para orçamento:",
+
+    "backLabel": "fechar"
+  },
+
+  "en": {
+    "name": "ELISEU",
+    "subhead": "electrical installation and maintenance · são josé do rio preto",
+    "trades": "INSTALLATION · MAINTENANCE · ELECTRICAL",
+    "serviceArea": "serves eldorado, rio preto and nearby areas",
+    "yearsActive": "",
+    "crea": "",
+    "responseTime": "QUOTES BY WHATSAPP",
+    "heroLines": ["Clean installs.", "Fast maintenance."],
+    "status": "On call now",
+    "address": "3747 RUA SANTANA DO PARNAÍBA",
+    "city": "ELDORADO · SJ RIO PRETO",
+    "hours": "(17) 3012-6258",
+    "primary": "Chat on WhatsApp",
+    "callAction": "or call now",
+
+    "services": [
+      {
+        "slug": "installs",
+        "label": "INSTALLS",
+        "title": "Outlets, showers, fixtures.",
+        "caption": "New points, outlet & switch replacement, residential and commercial electrical installs."
+      },
+      {
+        "slug": "repairs",
+        "label": "REPAIRS",
+        "title": "When power fails.",
+        "caption": "Power loss, short circuits, breaker swaps, wiring revisions and maintenance."
+      },
+      {
+        "slug": "emergency",
+        "label": "EMERGENCY",
+        "title": "Fast response.",
+        "caption": "Quick response in Rio Preto and region. Remote quotes via WhatsApp."
+      },
+      {
+        "slug": "panel",
+        "label": "REVIEW",
+        "title": "Install and review.",
+        "caption": "Electrical installation, review and maintenance for homes and small businesses."
+      }
+    ],
+
+    "lastVisit": "SERVICE · INSTALLATION + MAINTENANCE · RIO PRETO",
+    "lastVisits": [
+      "NOW · SERVING RIO PRETO",
+      "ELECTRICAL INSTALLATION · RESIDENTIAL",
+      "MAINTENANCE · BREAKERS AND WIRING",
+      "ELECTRICAL MAINTENANCE · REVIEW",
+      "QUOTE DIRECTLY ON WHATSAPP"
+    ],
+
+    "recadoLabel": "PLAY MESSAGE",
+    "recadoDuration": "0:15",
+    "recadoTranscript": "Hi, this is Eliseu. I handle electrical installation and maintenance in Rio Preto. Send a photo and I will reply on WhatsApp.",
+
+    "sheetTitle": "What's wrong?",
+    "quickReplies": [
+      "Power out / short circuit",
+      "Outlet or switch",
+      "Breaker panel / wiring",
+      "Shower / fan / light fixture",
+      "Remote quote"
+    ],
+    "open": "Open chat",
+
+    "photoTitle": "Send a photo",
+    "photoBody": "Snap a photo of what's wrong. I reply with a quote and a time slot.",
+    "photoSteps": ["Open WhatsApp", "Take / attach photo", "I get back in minutes"],
+    "photoCTA": "Open WhatsApp to attach",
+    "photoMsg": "Hello, here's a photo of the problem for a quote:",
+
+    "backLabel": "close"
+  }
+}

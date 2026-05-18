@@ -1,0 +1,165 @@
+{
+  "id": "alan-claudio",
+  "label": "Alan & Cláudio Eletricistas",
+  "phone": "+551732378867",
+  "waText": "Oi, vim pelo site da Alan e Cláudio Eletricistas e queria pedir um orçamento.",
+  "placeholder": "panel close-up — vertical",
+  "portrait": "",
+  "monogram": "A",
+  "serviceImages": {
+    "instalacoes": "images/carlos-instalacoes.jpg",
+    "manutencao": "images/carlos-manutencao.jpg",
+    "emergencia": "images/carlos-emergencia.jpg",
+    "quadro": "images/carlos-quadro.jpg"
+  },
+
+  "pt": {
+    "name": "ALAN & CLÁUDIO",
+    "subhead": "eletricistas · são josé do rio preto",
+    "trades": "RESIDENCIAL · COMERCIAL · MANUTENÇÃO",
+    "serviceArea": "atende atlântica, rio preto e região",
+    "yearsActive": "",
+    "crea": "",
+    "responseTime": "ORÇAMENTO PELO WHATSAPP",
+    "heroLines": ["Serviço direto.", "Sem complicação."],
+    "status": "Atendendo agora",
+    "address": "Rua Basilides Basso, 164",
+    "city": "PARQUE RESIDENCIAL ATLÂNTICA · SJ RIO PRETO",
+    "hours": "(17) 3237-8867",
+    "primary": "Falar no WhatsApp",
+    "callAction": "ou ligar agora",
+
+    "services": [
+      {
+        "slug": "instalacoes",
+        "label": "INSTALAÇÕES",
+        "title": "Tomadas, chuveiros, luminárias.",
+        "caption": "Pontos novos, troca de tomadas e interruptores, instalação elétrica residencial e comercial."
+      },
+      {
+        "slug": "manutencao",
+        "label": "MANUTENÇÃO",
+        "title": "Quando a energia falha.",
+        "caption": "Queda de energia, curto-circuito, troca de disjuntores, revisão de fiação e manutenção."
+      },
+      {
+        "slug": "emergencia",
+        "label": "EMERGÊNCIA",
+        "title": "Rápido no atendimento.",
+        "caption": "Atendimento em Rio Preto e região. Orçamento à distância pelo WhatsApp."
+      },
+      {
+        "slug": "quadro",
+        "label": "ATENDIMENTO",
+        "title": "Equipe de campo.",
+        "caption": "Atendimento elétrico para residências e comércios com contato direto por telefone."
+      }
+    ],
+
+    "lastVisit": "ATENDIMENTO · ELÉTRICA RESIDENCIAL E COMERCIAL · RIO PRETO",
+    "lastVisits": [
+      "AGORA · ATENDENDO EM RIO PRETO",
+      "INSTALAÇÃO ELÉTRICA · RESIDENCIAL",
+      "MANUTENÇÃO · DISJUNTORES E FIAÇÃO",
+      "ATENDIMENTO DE CAMPO · ELÉTRICA",
+      "ORÇAMENTO DIRETO NO WHATSAPP"
+    ],
+
+    "recadoLabel": "OUVIR RECADO",
+    "recadoDuration": "0:15",
+    "recadoTranscript": "Oi, aqui é a equipe Alan e Cláudio. Fazemos serviços elétricos em Rio Preto. Manda a foto que respondemos pelo telefone.",
+
+    "sheetTitle": "Qual o problema?",
+    "quickReplies": [
+      "Queda de luz / curto-circuito",
+      "Tomada ou interruptor",
+      "Quadro de disjuntores / fiação",
+      "Chuveiro / ventilador / luminária",
+      "Orçamento à distância"
+    ],
+    "open": "Abrir conversa",
+
+    "photoTitle": "Mandar foto do problema",
+    "photoBody": "Tira uma foto do que está acontecendo. Eu respondo com orçamento e horário.",
+    "photoSteps": ["Abre o WhatsApp", "Tira / escolhe a foto", "Eu retorno em minutos"],
+    "photoCTA": "Abrir WhatsApp e anexar foto",
+    "photoMsg": "Olá, segue foto do problema para orçamento:",
+
+    "backLabel": "fechar"
+  },
+
+  "en": {
+    "name": "ALAN & CLAUDIO",
+    "subhead": "electricians · são josé do rio preto",
+    "trades": "RESIDENTIAL · COMMERCIAL · MAINTENANCE",
+    "serviceArea": "serves atlantica, rio preto and nearby areas",
+    "yearsActive": "",
+    "crea": "",
+    "responseTime": "QUOTES BY WHATSAPP",
+    "heroLines": ["Straight service.", "No hassle."],
+    "status": "On call now",
+    "address": "164 RUA BASILIDES BASSO",
+    "city": "PARQUE RESIDENCIAL ATLÂNTICA · SJ RIO PRETO",
+    "hours": "(17) 3237-8867",
+    "primary": "Chat on WhatsApp",
+    "callAction": "or call now",
+
+    "services": [
+      {
+        "slug": "installs",
+        "label": "INSTALLS",
+        "title": "Outlets, showers, fixtures.",
+        "caption": "New points, outlet & switch replacement, residential and commercial electrical installs."
+      },
+      {
+        "slug": "repairs",
+        "label": "REPAIRS",
+        "title": "When power fails.",
+        "caption": "Power loss, short circuits, breaker swaps, wiring revisions and maintenance."
+      },
+      {
+        "slug": "emergency",
+        "label": "EMERGENCY",
+        "title": "Fast response.",
+        "caption": "Quick response in Rio Preto and region. Remote quotes via WhatsApp."
+      },
+      {
+        "slug": "panel",
+        "label": "ON-SITE",
+        "title": "Field team.",
+        "caption": "Electrical service for homes and businesses with direct phone contact."
+      }
+    ],
+
+    "lastVisit": "SERVICE · RESIDENTIAL AND COMMERCIAL ELECTRICAL · RIO PRETO",
+    "lastVisits": [
+      "NOW · SERVING RIO PRETO",
+      "ELECTRICAL INSTALLATION · RESIDENTIAL",
+      "MAINTENANCE · BREAKERS AND WIRING",
+      "FIELD SERVICE · ELECTRICAL",
+      "QUOTE DIRECTLY ON WHATSAPP"
+    ],
+
+    "recadoLabel": "PLAY MESSAGE",
+    "recadoDuration": "0:15",
+    "recadoTranscript": "Hi, this is Alan and Claudio's team. We handle electrical work in Rio Preto. Send a photo and we will reply by phone.",
+
+    "sheetTitle": "What's wrong?",
+    "quickReplies": [
+      "Power out / short circuit",
+      "Outlet or switch",
+      "Breaker panel / wiring",
+      "Shower / fan / light fixture",
+      "Remote quote"
+    ],
+    "open": "Open chat",
+
+    "photoTitle": "Send a photo",
+    "photoBody": "Snap a photo of what's wrong. I reply with a quote and a time slot.",
+    "photoSteps": ["Open WhatsApp", "Take / attach photo", "I get back in minutes"],
+    "photoCTA": "Open WhatsApp to attach",
+    "photoMsg": "Hello, here's a photo of the problem for a quote:",
+
+    "backLabel": "close"
+  }
+}
