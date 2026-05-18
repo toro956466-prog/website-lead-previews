@@ -1097,90 +1097,22 @@ function App() {
   const palette = PALETTES[t.palette] || PALETTES.cream;
   const clientId = React.useMemo(() => getClientId(), []);
   const { loading, client, error } = useClient(clientId);
-  const { scale, bare } = useStageScale(402, 874);
-
-  const switchClient = (id) => {
-    const u = new URL(window.location.href);
-    u.searchParams.set('c', id);
-    window.location.href = u.toString();
-  };
 
   const copy = client && (client[t.language] || client.pt);
-
-  // Treat the deployed page as a webapp: when client data is inlined (production
-  // bundle), always render full-bleed. When fetching from clients/*.json (the
-  // editor preview), show the phone frame on desktop. This keeps editing nice
-  // and prevents phone-inside-phone on real devices.
-  const inlineMode = typeof document !== 'undefined' && !!document.getElementById('client-data');
   useEffect(() => {
-    if (inlineMode) document.body.style.overflow = 'auto';
-  }, [inlineMode]);
+    document.body.style.overflow = 'auto';
+  }, []);
 
   return (
     <React.Fragment>
-      {(bare || inlineMode) ? (
-        <div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden', background: palette.bg }}>
-          {loading || !client ? (
-            <LoadingScreen palette={palette} error={error} clientId={clientId}/>
-          ) : (
-            <Page t={t} palette={palette} copy={copy} presetKey={clientId}
-                  placeholder={client.placeholder} preset={client}/>
-          )}
-        </div>
-      ) : (
-        <div style={{
-          transform: `scale(${scale})`,
-          transformOrigin: 'center center',
-          transition: 'transform 0.2s ease',
-        }}>
-          <IOSDevice width={402} height={874} dark={t.palette === 'moody'}>
-            {loading || !client ? (
-              <LoadingScreen palette={palette} error={error} clientId={clientId}/>
-            ) : (
-              <Page t={t} palette={palette} copy={copy} presetKey={clientId}
-                    placeholder={client.placeholder} preset={client}/>
-            )}
-          </IOSDevice>
-        </div>
-      )}
-
-      <TweaksPanel>
-        <TweakSection label="Client" />
-        <TweakSelect label="Client" value={clientId}
-          options={CLIENTS.map(c => ({ value: c.id, label: c.label }))}
-          onChange={switchClient} />
-        {client && client.en && (
-          <TweakRadio label="Language" value={t.language}
-            options={[{value:'pt', label:'PT'},{value:'en', label:'EN'}]}
-            onChange={(v) => setTweak('language', v)} />
+      <div style={{ width: '100vw', minHeight: '100vh', position: 'relative', overflow: 'hidden', background: palette.bg }}>
+        {loading || !client ? (
+          <LoadingScreen palette={palette} error={error} clientId={clientId}/>
+        ) : (
+          <Page t={t} palette={palette} copy={copy} presetKey={clientId}
+                placeholder={client.placeholder} preset={client}/>
         )}
-
-        <TweakSection label="Look" />
-        <TweakRadio label="Palette" value={t.palette}
-          options={[
-            {value:'cream', label:'Cream'},
-            {value:'bone', label:'Bone'},
-            {value:'moody', label:'Moody'},
-          ]}
-          onChange={(v) => setTweak('palette', v)} />
-        <TweakRadio label="Density" value={t.density}
-          options={[{value:'spacious', label:'Spacious'},{value:'compact', label:'Compact'}]}
-          onChange={(v) => setTweak('density', v)} />
-        <TweakToggle label="Italic hero" value={t.italicHero}
-          onChange={(v) => setTweak('italicHero', v)} />
-        <TweakToggle label="Status pill" value={t.showStatusPill}
-          onChange={(v) => setTweak('showStatusPill', v)} />
-
-        <TweakSection label="Demo extras" />
-        <TweakToggle label="Quick replies" value={t.useQuickReplies}
-          onChange={(v) => setTweak('useQuickReplies', v)} />
-        <TweakToggle label="Foto chip" value={t.showFotoChip}
-          onChange={(v) => setTweak('showFotoChip', v)} />
-        <TweakToggle label="Voice intro" value={t.showRecado}
-          onChange={(v) => setTweak('showRecado', v)} />
-        <TweakToggle label="Live ticker" value={t.showLastVisits}
-          onChange={(v) => setTweak('showLastVisits', v)} />
-      </TweaksPanel>
+      </div>
     </React.Fragment>
   );
 }
