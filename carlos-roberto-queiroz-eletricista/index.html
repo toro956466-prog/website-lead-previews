@@ -3,170 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carlos Roberto Queiroz Eletricista - Atendimento profissional no WhatsApp</title>
+  <title>Carlos Roberto Queiroz Eletricista - WhatsApp direto</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #08111d;
-      --bg-2: #0d1a2a;
-      --ink: #f7f9fc;
-      --muted: rgba(240, 245, 252, 0.70);
-      --card: rgba(255, 255, 255, 0.08);
-      --card-strong: rgba(255, 255, 255, 0.12);
-      --paper: #f6efe4;
-      --paper-2: #efe3d0;
-      --paper-ink: #131b27;
-      --paper-muted: #5e6675;
-      --line: rgba(255, 255, 255, 0.10);
-      --line-dark: rgba(19, 27, 39, 0.10);
-      --amber: #ffb347;
-      --amber-strong: #ff9f1a;
-      --teal: #43dbc8;
-      --success: #7df7a3;
-      --shadow: 0 28px 90px rgba(0, 0, 0, 0.24);
-      --radius-xl: 32px;
-      --radius-lg: 24px;
-      --radius-md: 18px;
+      --bg: #0a111a;
+      --bg-2: #0d1723;
+      --ink: #f5f7fb;
+      --muted: rgba(245, 247, 251, 0.72);
+      --paper: #f5ecdf;
+      --paper-ink: #111827;
+      --paper-muted: #616b7d;
+      --line: rgba(255,255,255,0.10);
+      --line-dark: rgba(17,24,39,0.10);
+      --amber: #ffb44d;
+      --amber-soft: rgba(255,180,77,0.14);
+      --teal: #57dccf;
+      --glow: 0 28px 90px rgba(0,0,0,0.28);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(255, 179, 71, 0.18), transparent 16%),
-        radial-gradient(circle at top right, rgba(67, 219, 200, 0.15), transparent 18%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 44%, #e9ddcc 44%, #f2e8da 100%);
       color: var(--ink);
-      line-height: 1.5;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(255,180,77,0.16), transparent 18%),
+        radial-gradient(circle at 88% 12%, rgba(87,220,207,0.12), transparent 18%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 46%, #ebe0cf 46%, #f3e8da 100%);
     }
     .wrap {
-      max-width: 1180px;
+      max-width: 1160px;
       margin: 0 auto;
-      padding: 22px 18px 110px;
+      padding: 24px 18px 110px;
     }
     .hero {
       position: relative;
       overflow: hidden;
-      margin-bottom: 18px;
-      border-radius: 34px;
+      border-radius: 36px;
       border: 1px solid var(--line);
       background:
-        linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)),
-        linear-gradient(180deg, #0d1724 0%, #101d2d 100%);
-      box-shadow: var(--shadow);
+        radial-gradient(circle at 15% 22%, rgba(255,180,77,0.14), transparent 22%),
+        linear-gradient(180deg, #0d1824 0%, #101b2a 100%);
+      box-shadow: var(--glow);
+      margin-bottom: 18px;
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 0.92fr 1.08fr;
-      min-height: 740px;
+      grid-template-columns: 0.96fr 1.04fr;
+      min-height: 700px;
     }
     .hero-copy {
-      position: relative;
-      z-index: 2;
-      padding: 40px 38px 36px;
+      padding: 42px 36px 36px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
-    .hero-copy::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 12% 18%, rgba(255,179,71,0.12), transparent 24%);
-      pointer-events: none;
-    }
-    .hero-media {
       position: relative;
-      min-height: 440px;
-      background-image:
-        linear-gradient(180deg, rgba(7, 12, 18, 0.08), rgba(7, 12, 18, 0.42)),
-        url('hero.jpg');
-      background-size: cover;
-      background-position: center;
+      z-index: 2;
     }
-    .hero-media::after {
-      content: "";
-      position: absolute;
-      inset: 22px;
-      border-radius: 28px;
-      border: 1px solid rgba(255,255,255,0.16);
-      pointer-events: none;
-    }
-    .brand {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
       margin-bottom: 18px;
+      color: rgba(255,255,255,0.76);
       font-size: 13px;
       font-weight: 700;
-      text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: rgba(255,255,255,0.78);
+      text-transform: uppercase;
     }
-    .brand::before {
+    .eyebrow::before {
       content: "";
       width: 30px;
       height: 1px;
-      background: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.24);
     }
-    .hero-tags {
+    .chips {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-bottom: 16px;
     }
-    .tag, .ghost-tag {
+    .chip {
       display: inline-flex;
       align-items: center;
+      min-height: 36px;
       padding: 8px 12px;
       border-radius: 999px;
       font-size: 12px;
       font-weight: 700;
-      text-transform: uppercase;
       letter-spacing: 0.06em;
-    }
-    .tag {
-      background: rgba(255,179,71,0.16);
-      color: #ffd79c;
-      border: 1px solid rgba(255,179,71,0.22);
-    }
-    .ghost-tag {
-      background: rgba(255,255,255,0.07);
-      color: rgba(255,255,255,0.82);
+      text-transform: uppercase;
       border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.84);
     }
-    h1, h2, h3, h4 { margin: 0 0 12px; }
+    .chip.accent {
+      background: var(--amber-soft);
+      border-color: rgba(255,180,77,0.22);
+      color: #ffd9a2;
+    }
+    h1, h2, h3 {
+      margin: 0 0 12px;
+      letter-spacing: -0.05em;
+    }
     h1 {
       max-width: 8ch;
-      font-size: 66px;
-      line-height: 0.90;
-      letter-spacing: -0.065em;
+      font-size: 72px;
+      line-height: 0.88;
     }
     h2 {
-      font-size: 31px;
-      line-height: 1.0;
-      letter-spacing: -0.045em;
+      font-size: 32px;
+      line-height: 0.98;
       color: var(--paper-ink);
     }
-    h3 { font-size: 18px; }
-    h4 {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    p {
-      margin: 0 0 12px;
-      color: var(--muted);
-      font-size: 16px;
+    h3 {
+      font-size: 19px;
+      color: var(--paper-ink);
     }
     .lede {
-      max-width: 31ch;
+      max-width: 30ch;
+      margin: 0;
       font-size: 19px;
-      line-height: 1.58;
-      color: rgba(255,255,255,0.72);
+      line-height: 1.55;
+      color: var(--muted);
     }
     .meta {
       display: flex;
@@ -181,7 +142,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 22px;
+      margin-top: 24px;
     }
     .cta, .cta-ghost {
       display: inline-flex;
@@ -192,302 +153,217 @@
       border-radius: 999px;
       text-decoration: none;
       font-weight: 700;
-      transition: transform .18s ease, filter .18s ease;
     }
     .cta {
-      background: linear-gradient(180deg, #ffc76f 0%, var(--amber) 100%);
-      color: #261400;
-      box-shadow: 0 16px 40px rgba(255,179,71,0.24);
+      background: linear-gradient(180deg, #ffc970 0%, var(--amber) 100%);
+      color: #261300;
+      box-shadow: 0 18px 40px rgba(255,180,77,0.24);
     }
     .cta-ghost {
       color: var(--ink);
-      background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
     }
-    .cta:hover, .cta-ghost:hover {
-      transform: translateY(-1px);
-      filter: brightness(0.98);
-    }
-    .signal-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 12px;
-      margin-top: 24px;
-    }
-    .signal {
-      padding: 16px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.10);
-      backdrop-filter: blur(12px);
-    }
-    .signal strong {
-      display: block;
-      margin-bottom: 4px;
-      color: #f6f8fa;
-      font-size: 16px;
-    }
-    .signal span {
-      color: rgba(255,255,255,0.66);
-      font-size: 14px;
-    }
-    .float-stack {
-      position: absolute;
-      inset: auto 18px 18px auto;
-      z-index: 3;
-      width: min(92%, 440px);
-      display: grid;
-      gap: 14px;
-    }
-    .float-card {
-      border-radius: 24px;
-      padding: 18px;
-      background: rgba(8, 16, 26, 0.78);
-      border: 1px solid rgba(255,255,255,0.12);
-      backdrop-filter: blur(14px);
-      box-shadow: 0 18px 44px rgba(0,0,0,0.18);
-    }
-    .float-card.light {
-      background: rgba(247, 239, 228, 0.92);
-      border: 1px solid rgba(19, 27, 39, 0.08);
-      color: var(--paper-ink);
-    }
-    .float-card h4 {
-      margin-bottom: 8px;
-      color: rgba(255,255,255,0.55);
-    }
-    .float-card.light h4 {
-      color: rgba(19, 27, 39, 0.52);
-    }
-    .float-card p {
-      margin-bottom: 0;
-      font-size: 14px;
-      color: rgba(255,255,255,0.74);
-    }
-    .float-card.light p {
-      color: var(--paper-muted);
-    }
-    .wa-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(125,247,163,0.12);
-      border: 1px solid rgba(125,247,163,0.18);
-      color: #b8ffcf;
-      font-size: 13px;
-      font-weight: 700;
-    }
-    .mini-actions {
+    .micro {
       display: flex;
+      gap: 18px;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
+      margin-top: 26px;
+      color: rgba(255,255,255,0.74);
+      font-size: 14px;
     }
-    .mini-action {
+    .micro strong {
+      display: block;
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .visual {
+      position: relative;
+      min-height: 420px;
+    }
+    .visual-stage {
+      position: absolute;
+      inset: 28px 28px 28px 0;
+      border-radius: 36px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 22% 24%, rgba(255,180,77,0.9), transparent 18%),
+        radial-gradient(circle at 78% 26%, rgba(87,220,207,0.8), transparent 18%),
+        linear-gradient(160deg, #111b28 0%, #172638 55%, #101721 100%);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .visual-ring {
+      position: absolute;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+    .ring-a {
+      width: 340px;
+      height: 340px;
+      right: 46px;
+      top: 60px;
+    }
+    .ring-b {
+      width: 220px;
+      height: 220px;
+      right: 150px;
+      top: 120px;
+    }
+    .visual-copy {
+      position: absolute;
+      left: 44px;
+      right: 44px;
+      bottom: 44px;
+      display: grid;
+      gap: 10px;
+    }
+    .visual-copy .big {
+      font-size: clamp(56px, 9vw, 112px);
+      line-height: 0.86;
+      letter-spacing: -0.08em;
+      font-weight: 700;
+      color: rgba(255,255,255,0.96);
+    }
+    .visual-copy .sub {
+      max-width: 18ch;
+      font-size: 15px;
+      line-height: 1.45;
+      color: rgba(255,255,255,0.68);
+    }
+    .visual-pill {
+      position: absolute;
+      top: 36px;
+      left: 36px;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      min-height: 40px;
+      gap: 8px;
+      min-height: 38px;
       padding: 10px 14px;
       border-radius: 999px;
-      color: inherit;
-      text-decoration: none;
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.88);
       font-size: 13px;
       font-weight: 700;
     }
-    .float-card.light .mini-action {
-      background: rgba(19,27,39,0.05);
-      border: 1px solid rgba(19,27,39,0.08);
-    }
-    .pix-grid {
-      display: grid;
-      grid-template-columns: 108px 1fr;
-      gap: 14px;
+    .wa-strip {
+      position: absolute;
+      right: 34px;
+      bottom: 34px;
+      display: inline-flex;
       align-items: center;
-    }
-    .pix-qr {
-      display: grid;
-      grid-template-columns: repeat(9, 1fr);
-      gap: 3px;
-      width: 108px;
-      height: 108px;
-      padding: 10px;
-      border-radius: 20px;
-      background: #fff;
-      box-shadow: inset 0 0 0 1px rgba(19,27,39,0.06);
-    }
-    .pix-qr span {
-      border-radius: 2px;
-      background: transparent;
-    }
-    .pix-qr span.f { background: #101722; }
-    .pix-copy strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--paper-ink);
-      font-size: 18px;
-    }
-    .pix-copy small {
-      display: block;
-      color: var(--paper-muted);
+      gap: 10px;
+      min-height: 44px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(11, 19, 31, 0.64);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #baffd0;
+      backdrop-filter: blur(10px);
       font-size: 13px;
-      line-height: 1.45;
+      font-weight: 700;
     }
     .section {
       margin-bottom: 18px;
       padding: 28px;
       border-radius: 30px;
-      background: rgba(247,239,228,0.96);
+      background: rgba(245,236,223,0.96);
       border: 1px solid rgba(255,255,255,0.26);
       box-shadow: 0 20px 55px rgba(17,24,39,0.08);
       color: var(--paper-ink);
     }
     .section p {
+      margin: 0;
       color: var(--paper-muted);
+      font-size: 16px;
+      line-height: 1.55;
     }
-    .service-grid {
+    .service-stack {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 14px;
+      gap: 0;
       margin-top: 18px;
+      border-top: 1px solid var(--line-dark);
     }
-    .service-card {
-      padding: 22px;
-      border-radius: 24px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.90), rgba(255,255,255,0.72));
-      border: 1px solid var(--line-dark);
+    .service-row {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line-dark);
     }
     .service-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 34px;
-      height: 34px;
-      margin-bottom: 14px;
-      border-radius: 999px;
-      background: rgba(255,179,71,0.20);
-      color: #a35a00;
+      color: rgba(17,24,39,0.34);
       font-size: 13px;
       font-weight: 700;
+      letter-spacing: 0.08em;
     }
-    .service-list {
-      list-style: none;
-      padding: 0;
-      margin: 14px 0 0;
-      display: grid;
-      gap: 10px;
-    }
-    .service-list li {
-      position: relative;
-      padding-left: 16px;
+    .service-copy p {
+      margin: 0;
       color: var(--paper-muted);
       font-size: 15px;
-      line-height: 1.45;
+      line-height: 1.55;
     }
-    .service-list li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 9px;
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--teal);
+    .service-copy h3 {
+      margin-bottom: 6px;
     }
-    .command-grid {
+    .trust {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 16px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+      align-items: center;
     }
-    .command-panel,
-    .contact-panel {
-      padding: 24px;
-      border-radius: 26px;
-      min-height: 100%;
-    }
-    .command-panel {
-      background: linear-gradient(160deg, #101a28 0%, #152337 100%);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: #f8fafb;
-      box-shadow: var(--shadow);
-    }
-    .command-panel h2,
-    .command-panel h3 {
-      color: #f8fafb;
-    }
-    .command-panel p {
-      color: rgba(248,250,251,0.72);
-    }
-    .command-list {
-      list-style: none;
-      padding: 0;
-      margin: 18px 0 0;
-      display: grid;
-      gap: 12px;
-    }
-    .command-list li {
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.84);
-    }
-    .contact-panel {
-      background: linear-gradient(180deg, #fff8ef 0%, #f3e5d3 100%);
-      border: 1px solid rgba(19,27,39,0.08);
+    .trust-big {
+      font-size: clamp(40px, 7vw, 82px);
+      line-height: 0.9;
+      letter-spacing: -0.07em;
       color: var(--paper-ink);
     }
-    .contact-panel p {
-      color: var(--paper-muted);
-    }
-    .close-grid {
+    .trust-side {
       display: grid;
-      grid-template-columns: 1fr 260px;
-      gap: 18px;
+      gap: 14px;
     }
-    .close-card,
-    .close-side {
-      border-radius: 24px;
-      padding: 24px;
-      background: rgba(255,255,255,0.82);
-      border: 1px solid rgba(19,27,39,0.08);
+    .trust-line {
+      padding: 0 0 14px;
+      border-bottom: 1px solid var(--line-dark);
+      color: var(--paper-muted);
+      font-size: 15px;
+      line-height: 1.5;
     }
-    .close-side {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background: linear-gradient(180deg, #fff7ee 0%, #f2e0c8 100%);
+    .close {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
     }
-    .demo-note {
-      margin-top: 22px;
-      padding: 15px 16px;
-      border-radius: 16px;
-      background: rgba(19,27,39,0.04);
-      border: 1px solid rgba(19,27,39,0.08);
-      color: #415061;
-      font-size: 14px;
+    .close-copy p {
+      margin-top: 8px;
     }
-    .action-rail {
+    .footer {
+      padding-top: 8px;
+      text-align: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.62);
+    }
+    .rail {
       display: none;
       position: fixed;
       left: 14px;
       right: 14px;
       bottom: 14px;
-      z-index: 25;
+      z-index: 24;
       padding: 10px;
       border-radius: 22px;
-      background: rgba(10, 17, 27, 0.94);
+      background: rgba(10,17,27,0.94);
       border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: 0 22px 60px rgba(0,0,0,0.26);
+      box-shadow: 0 22px 60px rgba(0,0,0,0.28);
       backdrop-filter: blur(12px);
     }
-    .action-rail-grid {
+    .rail-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0,1fr));
+      grid-template-columns: repeat(3, minmax(0,1fr));
       gap: 8px;
     }
     .rail-btn {
@@ -497,57 +373,41 @@
       min-height: 48px;
       padding: 10px;
       border-radius: 16px;
-      color: #f8fafb;
       text-decoration: none;
-      text-align: center;
       font-size: 12px;
       font-weight: 700;
+      color: #f8fafb;
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.10);
     }
     .rail-btn.primary {
-      background: linear-gradient(180deg, #ffc76f 0%, var(--amber) 100%);
-      color: #261400;
-      border-color: rgba(255,179,71,0.32);
-    }
-    .footer {
-      padding-top: 8px;
-      text-align: center;
-      font-size: 13px;
-      color: rgba(255,255,255,0.62);
+      background: linear-gradient(180deg, #ffc970 0%, var(--amber) 100%);
+      color: #261300;
     }
     @media (max-width: 980px) {
       .hero-grid,
-      .command-grid,
-      .close-grid,
-      .service-grid {
+      .trust,
+      .close {
         grid-template-columns: 1fr;
       }
-      .hero-media {
-        min-height: 360px;
-        order: -1;
+      .visual {
+        min-height: 520px;
       }
-      .float-stack {
-        position: static;
-        width: auto;
-        padding: 16px 18px 0;
+      .visual-stage {
+        inset: 0 22px 22px 22px;
       }
     }
     @media (max-width: 760px) {
-      h1 {
-        font-size: 46px;
-        max-width: 10ch;
-      }
       .wrap {
-        padding-bottom: 126px;
+        padding-bottom: 124px;
       }
       .hero-copy,
       .section {
         padding: 22px 20px;
       }
-      .signal-row,
-      .action-rail-grid {
-        grid-template-columns: repeat(2, minmax(0,1fr));
+      h1 {
+        font-size: 48px;
+        max-width: 10ch;
       }
       .hero-actions {
         flex-direction: column;
@@ -556,7 +416,25 @@
       .cta-ghost {
         width: 100%;
       }
-      .action-rail {
+      .visual-stage {
+        inset: 0 16px 16px 16px;
+      }
+      .visual-copy {
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+      }
+      .visual-pill {
+        left: 22px;
+        top: 22px;
+      }
+      .wa-strip {
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+        justify-content: center;
+      }
+      .rail {
         display: block;
       }
     }
@@ -568,13 +446,14 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <div>
-            <div class="brand">Mobile business surface</div>
-            <div class="hero-tags">
-              <span class="tag">electrician em Sao Jose do Rio Preto</span>
-              <span class="ghost-tag">WhatsApp-first</span>
+            <div class="eyebrow">WhatsApp-first preview</div>
+            <div class="chips">
+              <span class="chip accent">electrician em Sao Jose do Rio Preto</span>
+              <span class="chip">aceita pix</span>
+              <span class="chip">mobile first</span>
             </div>
             <h1>Carlos Roberto Queiroz Eletricista</h1>
-            <p class="lede">Instalacoes, manutencao e reparos eletricos em Sao Jose do Rio Preto, com apresentacao mais forte no celular e CTA direta para WhatsApp.</p>
+            <p class="lede">Eletricista em Sao Jose do Rio Preto com atendimento direto, visual forte e contato rapido pelo WhatsApp.</p>
             <div class="meta">
               <span>Rua Comendador Nicolau Lopes Rossi, 921 - Cristo Rei, Sao Jose do Rio Preto</span>
               <span>+55 17 3238-2773</span>
@@ -583,134 +462,95 @@
               <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Pedir orcamento</a>
               <a class="cta-ghost" href="tel:551732382773">Ligar agora</a>
             </div>
-            <div class="signal-row">
-              <div class="signal">
-                <strong>Contato rapido</strong>
-                <span>conversa direta no WhatsApp</span>
-              </div>
-              <div class="signal">
-                <strong>Visual mais premium</strong>
-                <span>menos cara de diretorio velho</span>
-              </div>
-              <div class="signal">
-                <strong>Feito para celular</strong>
-                <span>o visitante entende em segundos</span>
-              </div>
+          </div>
+          <div class="micro">
+            <div>
+              <strong>Direto</strong>
+              <span>menos friccao</span>
+            </div>
+            <div>
+              <strong>Premium</strong>
+              <span>mais confianca</span>
+            </div>
+            <div>
+              <strong>Rapido</strong>
+              <span>feito para celular</span>
             </div>
           </div>
         </div>
-        <div class="hero-media">
-          <div class="float-stack">
-            <div class="float-card">
-              <div class="wa-pill">Atendimento agora pelo WhatsApp</div>
-              <div class="mini-actions">
-                <a class="mini-action" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Chamar no WhatsApp</a>
-                <a class="mini-action" href="https://www.encontrasaojosedoriopreto.com.br/e/eletricistas-em-sao-jose-do-rio-preto.shtml">Ver localizacao</a>
-              </div>
+        <div class="visual">
+          <div class="visual-stage">
+            <div class="visual-pill">Atendimento local</div>
+            <div class="visual-ring ring-a"></div>
+            <div class="visual-ring ring-b"></div>
+            <div class="visual-copy">
+              <div class="big">RAPIDO<br>CLARO<br>DIRETO</div>
+              <div class="sub">Uma presença mais forte para quem encontra a empresa no celular e quer falar no WhatsApp sem perder tempo.</div>
             </div>
-            <div class="float-card light" id="pix">
-              <div class="pix-grid">
-                <div class="pix-qr">
-                  <span class="f"></span><span class="f"></span><span class="f"></span><span></span><span></span><span class="f"></span><span class="f"></span><span class="f"></span><span></span>
-                  <span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span>
-                  <span class="f"></span><span class="f"></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span class="f"></span><span class="f"></span>
-                  <span></span><span></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span></span><span></span>
-                  <span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span>
-                  <span class="f"></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span class="f"></span>
-                  <span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span><span></span><span class="f"></span>
-                  <span class="f"></span><span class="f"></span><span class="f"></span><span></span><span></span><span class="f"></span><span class="f"></span><span class="f"></span><span></span>
-                  <span></span><span class="f"></span><span></span><span class="f"></span><span class="f"></span><span></span><span></span><span class="f"></span><span></span>
-                </div>
-                <div class="pix-copy">
-                  <strong>PIX rapido</strong>
-                  <small>Camada opcional para sinal ou reserva. Abre espaco para uma experiencia mais util do que um site brochure normal.</small>
-                </div>
-              </div>
-            </div>
+            <div class="wa-strip">WhatsApp e PIX no mesmo fluxo</div>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2>O que o cliente entende rapido</h2>
-      <p>Em vez de cair num link genérico, a pessoa vê serviços, contexto local e ações diretas logo de cara.</p>
-      <div class="service-grid">
-        <div class="service-card">
+      <h2>Servicos em destaque</h2>
+      <div class="service-stack">
+        <div class="service-row">
           <div class="service-number">01</div>
-          <h3>Instalacoes</h3>
-          <ul class="service-list">
-            <li>iluminacao interna e externa</li><li>troca de tomadas e interruptores</li><li>chuveiros e ventiladores</li><li>pontos novos e extensoes</li>
-          </ul>
-        </div>
-<div class="service-card">
-          <div class="service-number">02</div>
-          <h3>Manutencao e reparos</h3>
-          <ul class="service-list">
-            <li>queda de energia e curto</li><li>troca de disjuntores</li><li>revisao de fiacao</li><li>correcao de falhas eletricas</li>
-          </ul>
-        </div>
-<div class="service-card">
-          <div class="service-number">03</div>
-          <h3>Residencial e comercial</h3>
-          <ul class="service-list">
-            <li>quadro de energia</li><li>adequacoes e melhorias</li><li>atendimento local rapido</li><li>orcamento por WhatsApp</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="command-grid">
-        <div class="command-panel">
-          <h2>Mais util que uma homepage comum</h2>
-          <p>A pessoa bate o olho, entende o que voce faz, ve area de atendimento, lista de servicos e chama no WhatsApp sem ficar perdida.</p>
-          <ul class="command-list">
-            <li>estrutura mais parecida com uma superficie de atendimento do que com um site parado</li>
-            <li>acoes principais expostas sem o visitante precisar procurar</li>
-            <li>camadas de WhatsApp, ligacao, localizacao e PIX no mesmo fluxo</li>
-            <li>visual mais moderno sem ficar exagerado ou confuso</li>
-          </ul>
-        </div>
-        <div class="contact-panel">
-          <h2>Atendimento direto</h2>
-          <p>Sem formulario longo. O cliente abre, entende os servicos e manda mensagem em segundos.</p>
-          <p>Base em Rua Comendador Nicolau Lopes Rossi, 921 - Cristo Rei, Sao Jose do Rio Preto. Atendimento em Sao Jose do Rio Preto e regiao.</p>
-          <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Abrir WhatsApp</a>
-          <a class="cta-ghost" href="tel:551732382773">Ligar para +55 17 3238-2773</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="close-grid">
-        <div class="close-card">
-          <h2>Presenca forte, clara e diferente</h2>
-          <p>O foco aqui nao e parecer uma startup ou um tema pronto. E parecer uma empresa local forte, facil de contratar e pronta para converter visita em conversa.</p>
-        </div>
-        <div class="close-side">
-          <div>
-            <h3>Acao principal</h3>
-            <p>Levar o visitante para contato ou pagamento de forma direta.</p>
+          <div class="service-copy">
+            <h3>Instalacoes</h3>
+            <p>iluminacao interna e externa • troca de tomadas e interruptores • chuveiros e ventiladores • pontos novos e extensoes</p>
           </div>
-          <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Falar agora</a>
+        </div>
+<div class="service-row">
+          <div class="service-number">02</div>
+          <div class="service-copy">
+            <h3>Manutencao e reparos</h3>
+            <p>queda de energia e curto • troca de disjuntores • revisao de fiacao • correcao de falhas eletricas</p>
+          </div>
+        </div>
+<div class="service-row">
+          <div class="service-number">03</div>
+          <div class="service-copy">
+            <h3>Residencial e comercial</h3>
+            <p>quadro de energia • adequacoes e melhorias • atendimento local rapido • orcamento por WhatsApp</p>
+          </div>
         </div>
       </div>
-      <div class="demo-note">
-        Esta pagina e uma previa demonstrativa criada para mostrar como Carlos Roberto Queiroz Eletricista
-        pode se apresentar melhor online e transformar visitas em conversas no WhatsApp.
+    </section>
+
+    <section class="section">
+      <div class="trust">
+        <div>
+          <div class="trust-big">Mais confianca.<br>Menos cara de diretorio.</div>
+        </div>
+        <div class="trust-side">
+          <div class="trust-line">Menos cara de diretorio velho. Mais clareza, mais confianca e mais facilidade para pedir orcamento.</div>
+          <div class="trust-line">Sem enrolacao. A pessoa abre, entende e chama.</div>
+          <div class="trust-line">Base em Rua Comendador Nicolau Lopes Rossi, 921 - Cristo Rei, Sao Jose do Rio Preto. Atendimento em Sao Jose do Rio Preto e regiao.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="close">
+        <div class="close-copy">
+          <h2>Pronto para virar conversa</h2>
+          <p>O objetivo aqui e simples: fazer a empresa parecer mais forte, mais atual e mais facil de contratar no primeiro clique.</p>
+        </div>
+        <a class="cta" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">Falar no WhatsApp</a>
       </div>
     </section>
 
     <div class="footer">Preview demonstrativo criado para prospeccao comercial.</div>
   </div>
 
-  <div class="action-rail">
-    <div class="action-rail-grid">
+  <div class="rail">
+    <div class="rail-grid">
       <a class="rail-btn primary" href="https://wa.me/551732382773?text=Oi%2C%20vim%20pelo%20site%20de%20Carlos%20Roberto%20Queiroz%20Eletricista%20e%20queria%20pedir%20um%20orcamento.">WhatsApp</a>
       <a class="rail-btn" href="tel:551732382773">Ligar</a>
       <a class="rail-btn" href="https://www.encontrasaojosedoriopreto.com.br/e/eletricistas-em-sao-jose-do-rio-preto.shtml">Mapa</a>
-      <a class="rail-btn" href="#pix">PIX</a>
     </div>
   </div>
 </body>
