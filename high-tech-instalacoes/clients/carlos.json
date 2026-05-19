@@ -15,17 +15,17 @@
 
   "pt": {
     "name": "HIGH TECH",
-    "subhead": "instalações elétricas · são josé do rio preto",
-    "trades": "ELÉTRICA · AR-CONDICIONADO · MANUTENÇÃO",
+    "subhead": "instalações elétricas e ar-condicionado",
+    "trades": "RIO PRETO · ATENDIMENTO DIRETO · WHATSAPP",
     "serviceArea": "atende jardim santa catarina, rio preto e região",
     "yearsActive": "",
     "crea": "",
     "responseTime": "ORÇAMENTO PELO WHATSAPP",
-    "heroLines": ["Instalação certa.", "Resposta rápida."],
-    "status": "Atendendo agora",
+    "heroLines": ["Elétrica e ar.", "Sem enrolação."],
+    "status": "Rio Preto e região",
     "address": "Av. das Vivendas, 533",
     "city": "JARDIM SANTA CATARINA · SJ RIO PRETO",
-    "hours": "(17) 98142-4275",
+    "hours": "WhatsApp (17) 98142-4275",
     "primary": "Falar no WhatsApp",
     "callAction": "ou ligar agora",
 
@@ -33,36 +33,36 @@
       {
         "slug": "instalacoes",
         "label": "INSTALAÇÕES",
-        "title": "Tomadas, chuveiros, luminárias.",
-        "caption": "Pontos novos, troca de tomadas e interruptores, instalação elétrica residencial e comercial."
+        "title": "Tomadas, luminárias e pontos novos.",
+        "caption": "Instalação elétrica residencial e comercial com atendimento direto pelo celular."
       },
       {
         "slug": "manutencao",
         "label": "MANUTENÇÃO",
         "title": "Quando a energia falha.",
-        "caption": "Queda de energia, curto-circuito, troca de disjuntores, revisão de fiação e manutenção."
+        "caption": "Curto, queda de energia, troca de disjuntores, revisão de fiação e manutenção."
       },
       {
         "slug": "emergencia",
         "label": "EMERGÊNCIA",
-        "title": "Rápido no atendimento.",
-        "caption": "Atendimento em Rio Preto e região. Orçamento à distância pelo WhatsApp."
+        "title": "Resposta rápida no WhatsApp.",
+        "caption": "Atendimento em Rio Preto e região com orçamento inicial direto na conversa."
       },
       {
         "slug": "quadro",
         "label": "AR-CONDICIONADO",
-        "title": "Elétrica e climatização.",
-        "caption": "Instalações elétricas e de ar-condicionado com atendimento direto pelo celular."
+        "title": "Elétrica e ar-condicionado.",
+        "caption": "Instalações e ajustes com atendimento simples, rápido e local."
       }
     ],
 
     "lastVisit": "ATENDIMENTO · ELÉTRICA E AR · RIO PRETO",
     "lastVisits": [
-      "AGORA · ATENDENDO EM RIO PRETO",
+      "ATENDENDO · RIO PRETO E REGIÃO",
       "INSTALAÇÃO ELÉTRICA · RESIDENCIAL",
       "MANUTENÇÃO · DISJUNTORES E FIAÇÃO",
       "AR-CONDICIONADO · INSTALAÇÃO",
-      "ORÇAMENTO DIRETO NO WHATSAPP"
+      "ORÇAMENTO · WHATSAPP"
     ],
 
     "recadoLabel": "OUVIR RECADO",
@@ -71,11 +71,11 @@
 
     "sheetTitle": "Qual o problema?",
     "quickReplies": [
-      "Queda de luz / curto-circuito",
+      "Queda de luz / curto",
       "Tomada ou interruptor",
-      "Quadro de disjuntores / fiação",
-      "Chuveiro / ventilador / luminária",
-      "Orçamento à distância"
+      "Quadro / disjuntor / fiação",
+      "Ar-condicionado",
+      "Quero um orçamento"
     ],
     "open": "Abrir conversa",
 

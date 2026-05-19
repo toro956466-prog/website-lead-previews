@@ -4,7 +4,7 @@
 const { useState, useEffect, useRef, useMemo } = React;
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "palette": "cream",
+  "palette": "moody",
   "language": "pt",
   "density": "spacious",
   "italicHero": true,
@@ -12,7 +12,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "showRecado": false,
   "showLastVisits": false,
   "showFotoChip": false,
-  "useQuickReplies": false
+  "useQuickReplies": true
 }/*EDITMODE-END*/;
 
 // ─────────────────────────────────────────────────────────────────────────────
